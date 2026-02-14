@@ -2,25 +2,27 @@
 .header {
     width: 100%;
     background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+
 }
 
 .header-wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 40px;
+    height: 89px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 80px;
+
 }
 
 .header-branding {
     display: flex;
     align-items: center;
+    padding: 5px 11px 0px 47px;
+
 }
 
 .logo {
@@ -30,15 +32,17 @@
 
 /* NAVEGACIÓN */
 .main-nav {
-    flex: 1;
+
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 33px;
 }
 
 .menu {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 54px;
     align-items: center;
 }
 
@@ -46,8 +50,8 @@
     position: relative;
 }
 
-.menu-item > a {
-    color:#011832;
+.menu-item>a {
+    color: #011832;
     text-decoration: none;
     font-family: var(--fuente-principal);
     font-weight: 500;
@@ -59,7 +63,7 @@
 }
 
 /* Flechita para items con submenu */
-.has-submenu > a::after {
+.has-submenu>a::after {
     content: '';
     display: inline-block;
     width: 8px;
@@ -71,11 +75,11 @@
     transition: transform 0.5s;
 }
 
-.has-submenu:hover > a::after {
+.has-submenu:hover>a::after {
     transform: rotate(225deg);
 }
 
-.menu-item > a:hover {
+.menu-item>a:hover {
     color: var(--secondary-color);
 }
 
@@ -97,7 +101,7 @@
     left: 0;
     background: white;
     min-width: 280px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     list-style: none;
     padding: 15px 0;
     border-radius: 4px;
@@ -126,7 +130,8 @@
     font-family: var(--fuente-secundaria);
     font-size: 15px;
     transition: all 0.5s;
-    white-space: nowrap; /* Evita que el texto se parta en dos líneas */
+    white-space: nowrap;
+    /* Evita que el texto se parta en dos líneas */
 }
 
 .submenu li a:hover {
@@ -192,7 +197,7 @@
         text-align: center;
     }
 
-    .menu-item > a {
+    .menu-item>a {
         padding: 15px 0;
         font-size: 18px;
         justify-content: center;
@@ -210,17 +215,20 @@
         transform: translateY(0);
         display: none;
         box-shadow: none;
-        padding: 10px 0; /* CAMBIÉ el padding */
+        padding: 10px 0;
+        /* CAMBIÉ el padding */
         margin-top: 0;
-        text-align: center; /* Centra los items del submenu */
+        text-align: center;
+        /* Centra los items del submenu */
     }
 
     .has-submenu.active .submenu {
         display: block;
     }
 
-    .has-submenu > a::after {
-        margin-left: 8px; /* CAMBIÉ de auto a un valor fijo para centrar mejor */
+    .has-submenu>a::after {
+        margin-left: 8px;
+        /* CAMBIÉ de auto a un valor fijo para centrar mejor */
     }
 
     .submenu li a {
@@ -229,7 +237,8 @@
     }
 
     .submenu li a:hover {
-        padding-left: 0; /* QUITÉ el desplazamiento en hover */
+        padding-left: 0;
+        /* QUITÉ el desplazamiento en hover */
         background: transparent;
     }
 
