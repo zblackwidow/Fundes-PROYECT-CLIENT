@@ -69,8 +69,10 @@ h6 {
 .hero .wrapper {
     position: relative;
     z-index: 3;
-    padding-top: 404px; /* Según tu Pixel Perfect, Left: 233, Top: -10 */
-    padding-left: 69px; /* Ya lo tenés con el padding del wrapper general */
+    padding-top: 404px;
+    /* Según tu Pixel Perfect, Left: 233, Top: -10 */
+    padding-left: 69px;
+    /* Ya lo tenés con el padding del wrapper general */
 }
 
 .hero h1 {
@@ -94,6 +96,7 @@ h6 {
 .hero h1 .highlight-secondary {
     color: var(--secondary-color);
 }
+
 /* consultoria */
 .consulting {
     width: 100%;
@@ -101,7 +104,11 @@ h6 {
     background: #F1F7FF;
 }
 
-/* Impact Intro */
+.wrapper-consulting {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
 .impact-intro {
     display: grid;
     grid-template-columns: 578px 1fr;
@@ -131,12 +138,6 @@ h6 {
     z-index: 2;
 }
 
-/* Impact Content */
-
-.wrapper-consulting {
-    max-width: 1296px;
-    margin: 0 auto;
-}
 .impact-content {
     display: flex;
     flex-direction: column;
@@ -180,15 +181,14 @@ h6 {
 
 /* Impact Goals */
 .impact-goals {
-    width: 1296px;
-    height: 454px;
-    padding: 40px 0 100px;
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 80px 72px 0px;
     background: linear-gradient(180deg, #027592 0%, #1D477E 75%);
     position: relative;
     border-radius: 24px;
 }
 
-/* Patrón decorativo en la esquina (opcional) */
 .impact-goals::after {
     content: '';
     position: absolute;
@@ -212,12 +212,14 @@ h6 {
 }
 
 .goals-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px 48px;
 }
 
 .goal-card {
+    flex: 0 0 calc(33.333% - 32px);
+    min-width: 300px;
     background: #FFFFFF1A;
     border-radius: 24px;
     box-shadow:
@@ -229,6 +231,7 @@ h6 {
         0px 100px 80px 0px rgba(0, 0, 0, 0.161);
     transition: all 0.3s;
     overflow: hidden;
+    align-self: flex-start;
 }
 
 .goal-card:hover {
@@ -320,92 +323,143 @@ h6 {
     color: white;
 }
 
+
+/* METHODOLOGY SECTION */
+.methodology {
+    width: 100%;
+    height: 542px;
+    background: #122140;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper-methodology {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+/* LADO IZQUIERDO - Imágenes */
+.methodology-media {
+    flex: 0 0 682px;
+    width: 682px;
+    height: 518px;
+    position: relative;
+}
+
+.methodology-media img:first-child {
+    position: absolute;
+    top: 17px;
+    left: -22px;
+    width: 100%;
+    z-index: 1;
+}
+
+.woman-methodology {
+    position: absolute;
+    bottom: -27px;
+    left: -33px;
+    width: 682px;
+    height: 518px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* LADO DERECHO - Contenido */
+.methodology-content {
+    width: 620px;
+    height: 476px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 34px 3px;
+    gap: 24px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+.methodology-content h2 {
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    color: white;
+}
+
+.methodology-content h2 strong {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.methodology-content p {
+    font-family: var(--fuente-secundaria);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: white;
+    padding: 0 0 9px 0;
+
+}
+
+.button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 350px;
+    height: 52px;
+    padding: 16px 30px;
+    background: #4B9ED9;
+    color: var(--footer-color);
+    font-family: var(--fuente-principal);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #4B9ED9;
+    transition: all 0.3s;
+}
+
+.button-primary:hover {
+    background: #3a8bc7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(75, 158, 217, 0.3);
+}
+/* impacto */
+.impact {
+    background: #F1F7FF;
+}
+.wrapper-impact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+.impact-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid blue;
+}
+.impact-metrics{
+    border: 1px solid green;
+}
+.impact-geo{
+    border: 1px solid slateblue;
+}
+
+.impact-geo  .impact-metrics ul{
+    list-style: none;
+}
+
 /* RESPONSIVE */
-@media (max-width: 1024px) {
-    .goals-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-}
 
-@media (max-width: 768px) {
-    .impact-goals {
-        padding: 60px 0 80px;
-    }
-
-    .impact-goals h3 {
-        font-size: 32px;
-    }
-
-    .goals-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .goal-card-header {
-        padding: 32px 24px;
-    }
-
-    .goal-card h4 {
-        font-size: 18px;
-    }
-
-    .goal-card-content ul {
-        padding: 20px 24px 28px;
-    }
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .impact-intro {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .impact-image {
-        width: 100%;
-        max-width: 578px;
-        margin: 0 auto;
-    }
-
-    .goals-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .consulting {
-        padding: 60px 0;
-    }
-
-    .impact-content {
-        padding: 30px 20px;
-    }
-
-    .impact-content h2 {
-        font-size: 28px;
-    }
-
-    .impact-content p {
-        font-size: 16px;
-    }
-
-    .goals-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .goal-card {
-        padding: 30px 24px;
-    }
-}
-
-
-
-
-
-
-
-/* RESPONSIVE */
+/* Desk */
 @media (max-width: 1024px) {
     .wrapper {
         padding: 0 30px;
@@ -422,8 +476,17 @@ h6 {
     .hero h1 {
         font-size: 52px;
     }
+
+    .impact-goals {
+        padding: 60px 40px 80px;
+    }
+
+    .goal-card {
+        flex: 1 1 calc(50% - 24px);
+    }
 }
 
+/* tablet */
 @media (max-width: 768px) {
     .wrapper {
         padding: 0 20px;
@@ -444,8 +507,35 @@ h6 {
     .hero h1 .highlight {
         padding: 4px 12px;
     }
+
+
+    .impact-goals {
+        padding: 40px 20px 60px;
+    }
+
+    .impact-goals h3 {
+        font-size: 32px;
+    }
+
+    .goal-card {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .goal-card-header {
+        padding: 32px 24px;
+    }
+
+    .goal-card h4 {
+        font-size: 18px;
+    }
+
+    .goal-card-content ul {
+        padding: 20px 24px 28px;
+    }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
     .hero {
         height: 500px;
