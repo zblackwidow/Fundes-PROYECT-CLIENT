@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/contador.css">
 </head>
 
 <body>
@@ -264,68 +266,78 @@
                     <div class="impact-intro">
                         <h2>Nuestro impacto</h2>
                         <p>
-                            Durante <strong>más de 40 años</strong> hemos creído que las mipymes son el
-                            motor del desarrollo sostenible de nuestra región. Junto a nuestros aliados,
-                            hemos acompañado a más de <strong>2 millones de mipymes</strong> y sus comunidades,
-                            demostrando que cuando las mipymes crecen, también crecen las oportunidades,
-                            el bienestar y la resiliencia de nuestros territorios.
+                            Durante <strong>más de 40 años</strong> hemos creído que las <strong>mipymes son el motor
+                                del desarrollo sostenible</strong> de nuestra región. Junto a nuestros aliados, hemos
+                            acompañado a más de 2 millones de mipymes y sus comunidades, demostrando que <strong>cuando
+                                las mipymes crecen, también crecen las oportunidades, el bienestar y la resiliencia de
+                                nuestros territorios</strong>.
                         </p>
                     </div>
 
                     <div class="impact-metrics">
                         <ul class="metrics-list">
                             <li class="metric-item">
-                                <span class="metric-number">+01</span>
+                                <span class="metric-number" data-target="40">+01</span>
                                 <span class="metric-label">Años de experiencia</span>
                             </li>
                             <li class="metric-item">
-                                <span class="metric-number">0000001</span>
+                                <span class="metric-number" data-target="2000000">0000001</span>
                                 <span class="metric-label">Mipymes impactadas</span>
                             </li>
                             <li class="metric-item">
-                                <span class="metric-number">01</span>
+                                <span class="metric-number" data-target="24">01</span>
                                 <span class="metric-label">Países</span>
                             </li>
                             <li class="metric-item">
-                                <span class="metric-number">+001</span>
+                                <span class="metric-number" data-target="600">+001</span>
                                 <span class="metric-label">Proyectos</span>
                             </li>
                         </ul>
                         <p class="impact-note">Desde el 2014</p>
                     </div>
 
-                    <div class="impact-geo">
-
-                        <div class="geo-map">
-                            <img src="img/mapa-america.png" alt="Mapa de América con presencia de FUNDES">
+                    <div class="geo-map">
+                        <!-- Iframe 1 - AMÉRICA (visible por defecto) -->
+                        <div class="map-slide active">
+                            <div style="width: 100%;">
+                                <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+                                    <iframe title="AMÉRICA" frameborder="0" width="1200px" height="675px"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        src="https://view.genially.com/695d3564930571d7cbabe2e5" type="text/html"
+                                        allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+                                        allownetworking="all">
+                                    </iframe>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="geo-content">
-
-                            <h3>América</h3>
-                            <p class="geo-subtitle">Añadir subtítulo</p>
-                            <p>
-                                En América tenemos 3 hubs principales: México, Centroamérica y Sudamérica.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor
-                                scelerisque interdum eu semper lobortis.
-                            </p>
-                            <ul class="geo-stats">
-                                <li>
-                                    <strong>3</strong>
-                                    <span>Oficinas</span>
-                                </li>
-                                <li>
-                                    <strong>23</strong>
-                                    <span>Países</span>
-                                </li>
-                                <li>
-                                    <strong>1029</strong>
-                                    <span>Proyectos</span>
-                                </li>
-                            </ul>
+                        <!-- Iframe 2 - ÁFRICA (oculto) -->
+                        <div class="map-slide">
+                            <div style="width: 100%;">
+                                <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+                                    <iframe title="ÁFRICA" frameborder="0" width="1200px" height="675px"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        src="https://view.genially.com/695d43b0af1831ae6ead8339" type="text/html"
+                                        allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+                                        allownetworking="all">
+                                    </iframe>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Botones de navegación -->
+                        <button class="map-nav map-prev" aria-label="Mapa anterior">
+                            <img src="assets/img/icons/right.svg" alt="">
+
+                        </button>
+                        <button class="map-nav map-next" aria-label="Siguiente mapa">
+                            <img src="assets/img/icons/left.svg" alt="">
+                        </button>
                     </div>
+
+
                 </div>
+            </div>
             </div>
         </section>
         <section class="annual-report-cta">
@@ -482,6 +494,8 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/contador.js"></script>
 </body>
 
 </html>
