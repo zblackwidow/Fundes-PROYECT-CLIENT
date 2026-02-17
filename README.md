@@ -89,7 +89,7 @@ Accede al proyecto en línea: **[URL del proyecto]**
 
 1. Clona el repositorio:
    ```bash
-   git clone [URL-del-repositorio]
+   git clone https://github.com/zblackwidow/Fundes-PROYECT-CLIENT.git
    ```
 
 2. Abre la carpeta en Visual Studio Code
