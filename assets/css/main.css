@@ -647,12 +647,16 @@ h6 {
 }
 
 
-/* LARGE TABLET - 1024px y menos */
+
+
+/* TABLET GRANDE - 1024px y menos */
 @media (max-width: 1024px) {
+    /* Wrapper general */
     .wrapper {
         padding: 0 30px;
     }
 
+    /* Hero Section */
     .hero {
         height: 600px;
     }
@@ -667,6 +671,16 @@ h6 {
         max-width: 100%;
     }
 
+    /* Consulting Section */
+    .consulting {
+        padding: 60px 0;
+    }
+
+    .wrapper-consulting {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+
     .impact-intro {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -674,54 +688,73 @@ h6 {
 
     .impact-image {
         width: 100%;
+        max-width: 578px;
         height: auto;
+        margin: 0 auto;
     }
 
     .impact-image .main-image {
         width: 100%;
         height: auto;
-        position: static;
+        position: relative;
+        left: 0;
     }
 
     .impact-image .pattern-circles {
         display: none;
     }
 
-    .wrapper-consulting {
-        padding: 0 30px;
+    .impact-content h2 {
+        font-size: 36px;
     }
 
+    .impact-content p {
+        font-size: 17px;
+    }
+
+    /* Impact Goals */
     .impact-goals {
+        max-width: 100%;
         padding: 60px 40px 80px;
         margin-top: 50px;
-    }
-
-    .goal-card {
-        flex: 1 1 calc(50% - 24px);
-        min-height: 150px;
     }
 
     .goals-grid {
         width: 100%;
     }
 
+    .goal-card {
+        flex: 1 1 calc(50% - 24px);
+    }
+
+    /* Methodology */
     .methodology {
         height: auto;
+        padding: 60px 0;
     }
 
     .wrapper-methodology {
         flex-direction: column;
-        padding: 40px 30px;
+        gap: 40px;
+        padding: 0 30px;
     }
 
     .methodology-media {
-        display: none;
+        display: none; /* Ocultar imagen en tablet */
     }
 
     .methodology-content {
         width: 100%;
-        height: auto;
+        max-width: 100%;
         padding: 0;
+    }
+
+    .methodology-content h2 {
+        font-size: 36px;
+    }
+
+    .methodology-content p {
+        font-size: 17px;
     }
 
     .button-primary {
@@ -729,6 +762,20 @@ h6 {
         max-width: 350px;
     }
 
+    /* Impact/Map Section */
+    .wrapper-impact {
+        padding: 0 30px;
+    }
+
+    .impact-map h2 {
+        font-size: 36px;
+    }
+
+    .impact-map p {
+        font-size: 17px;
+    }
+
+    /* Book/Annual Report */
     .bookanual {
         flex-direction: column;
         gap: 40px;
@@ -737,41 +784,59 @@ h6 {
 
     .book {
         height: auto;
-        overflow: hidden;
-        padding: 40px 10px;
+        padding: 40px 20px;
     }
 
     .book-media img {
         width: 100%;
         max-width: 400px;
-        position: relative;
-        left: 55px;
+        transform: translateX(0); /* Reset transform */
     }
 
+    /* Brands */
     .brands {
         height: auto;
-        padding: 40px 0;
+        padding: 60px 0;
     }
 
     .brand-wrapper {
         padding-top: 40px;
     }
 
-    .brands-title {
-        width: 100%;
-    }
-
     .brands-title h2 {
         font-size: 56px;
     }
+
+    .brands-title h3 {
+        font-size: 19px;
+    }
+
+    .brands-track {
+        gap: 60px;
+    }
+
+    .brand-item {
+        width: 180px;
+    }
+
+    .brand-item img {
+        max-width: 150px;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 60px 0;
+    }
 }
 
-/* TABLET - 768px y menos */
+
 @media (max-width: 768px) {
+    /* Wrapper general */
     .wrapper {
         padding: 0 20px;
     }
 
+    /* Hero Section */
     .hero {
         height: 500px;
     }
@@ -789,8 +854,9 @@ h6 {
         padding: 4px 12px;
     }
 
+    /* Consulting Section */
     .consulting {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     .wrapper-consulting {
@@ -810,23 +876,27 @@ h6 {
         padding: 6px 16px;
     }
 
+    /* Impact Goals */
     .impact-goals {
         padding: 40px 20px 60px;
         margin: 30px 0;
-
     }
 
     .impact-goals h3 {
         font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .goals-grid {
+        gap: 24px;
     }
 
     .goal-card {
         flex: 1 1 100%;
-        width: 100%;
     }
 
     .goal-card-header {
-        padding: 20px;
+        padding: 24px 20px;
     }
 
     .goal-card h4 {
@@ -834,11 +904,20 @@ h6 {
     }
 
     .goal-card-content ul {
-        padding: 16px 20px 20px;
+        padding: 20px;
     }
 
     .goal-card-content li {
         font-size: 14px;
+    }
+
+    /* Methodology */
+    .methodology {
+        padding: 50px 0;
+    }
+
+    .wrapper-methodology {
+        padding: 0 20px;
     }
 
     .methodology-content h2 {
@@ -849,6 +928,11 @@ h6 {
         font-size: 16px;
     }
 
+    /* Impact/Map Section */
+    .wrapper-impact {
+        padding: 0 20px;
+    }
+
     .impact-map h2 {
         font-size: 32px;
     }
@@ -857,8 +941,15 @@ h6 {
         font-size: 16px;
     }
 
-    .wrapper-impact {
-        padding: 0 20px;
+    /* Book/Annual Report */
+    .bookanual {
+        padding: 30px 20px;
+        gap: 30px;
+        flex-direction: column-reverse;
+    }
+
+    .book {
+        padding: 30px 15px;
     }
 
     .book-content h2 {
@@ -869,16 +960,29 @@ h6 {
         font-size: 24px;
     }
 
-    .bookanual {
-        padding: 30px 20px;
-        gap: 30px;
-        flex-direction: column-reverse
+    .book-content p {
+        font-size: 16px;
+    }
+
+    .book-media img {
+        max-width: 350px;
+        transform: translateX(0);
     }
 
     .button-primary,
     .book-content a {
         width: 100%;
+        max-width: none;
         font-size: 16px;
+    }
+
+    /* Brands */
+    .brands {
+        padding: 50px 0;
+    }
+
+    .brand-wrapper {
+        padding-top: 30px;
     }
 
     .brands-title h2 {
@@ -889,6 +993,10 @@ h6 {
         font-size: 18px;
     }
 
+    .brands-track {
+        gap: 50px;
+    }
+
     .brand-item {
         width: 150px;
     }
@@ -897,17 +1005,20 @@ h6 {
         max-width: 130px;
     }
 
+    /* Contact */
     .contact {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 }
 
-/* MOBILE - 480px y menos */
+
 @media (max-width: 480px) {
+    /* Wrapper general */
     .wrapper {
         padding: 0 15px;
     }
 
+    /* Hero Section */
     .hero {
         height: 400px;
     }
@@ -927,6 +1038,7 @@ h6 {
         margin: 5px 0;
     }
 
+    /* Consulting Section */
     .consulting {
         padding: 40px 0;
     }
@@ -948,15 +1060,17 @@ h6 {
         padding: 5px 12px;
     }
 
+    /* Impact Goals */
     .impact-goals {
-        padding: 30px 15px;
-        margin: 28px 0;
+        padding: 30px 15px 50px;
+        margin: 20px 0;
         border-radius: 16px;
     }
 
     .impact-goals::after {
         width: 150px;
         height: 150px;
+        opacity: 0.3;
     }
 
     .impact-goals h3 {
@@ -964,8 +1078,12 @@ h6 {
         margin-bottom: 30px;
     }
 
+    .goals-grid {
+        gap: 20px;
+    }
+
     .goal-card-header {
-        padding: 15px;
+        padding: 18px 15px;
         gap: 10px;
     }
 
@@ -975,28 +1093,36 @@ h6 {
     }
 
     .goal-card h4 {
-        font-size: 14px;
-        min-height: auto;
+        font-size: 16px;
     }
 
     .goal-toggle {
-        font-size: 24px;
+        font-size: 28px;
         width: 28px;
         height: 28px;
     }
 
     .goal-card.active .goal-card-content {
-        max-height: 400px;
+        max-height: 500px;
     }
 
     .goal-card-content ul {
-        padding: 16px;
+        padding: 16px 15px;
     }
 
     .goal-card-content li {
         font-size: 13px;
         padding-left: 16px;
         margin-bottom: 8px;
+    }
+
+    /* Methodology */
+    .methodology {
+        padding: 40px 0;
+    }
+
+    .wrapper-methodology {
+        padding: 0 15px;
     }
 
     .methodology-content h2 {
@@ -1007,6 +1133,14 @@ h6 {
         font-size: 14px;
     }
 
+    .button-primary {
+        width: 100%;
+        height: 48px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* Impact/Map Section */
     .wrapper-impact {
         padding: 0 15px;
     }
@@ -1020,7 +1154,17 @@ h6 {
     }
 
     .impact-note p {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    /* Book/Annual Report */
+    .bookanual {
+        padding: 25px 15px;
+        gap: 20px;
+    }
+
+    .book {
+        padding: 25px 10px;
     }
 
     .book-content h2 {
@@ -1036,30 +1180,23 @@ h6 {
         font-size: 14px;
     }
 
-    .bookanual {
-        gap: 20px;
+    .book-media img {
+        max-width: 280px;
     }
 
-    .button-primary,
     .book-content a {
-        width: 100%;
         height: 48px;
-        padding: 12px 20px;
         font-size: 14px;
     }
 
+    /* Brands */
     .brands {
-        height: auto;
-        padding: 30px 0;
+        padding: 40px 0;
     }
 
     .brand-wrapper {
         padding-top: 20px;
-        gap: 30px;
-    }
-
-    .brands-title {
-        width: 100%;
+        gap: 25px;
     }
 
     .brands-title h2 {
@@ -1069,11 +1206,11 @@ h6 {
 
     .brands-title h3 {
         font-size: 16px;
-        padding-top: 15px;
+        padding-top: 12px;
     }
 
     .brands-track {
-        gap: 40px;
+        gap: 30px;
     }
 
     .brand-item {
@@ -1084,6 +1221,7 @@ h6 {
         max-width: 100px;
     }
 
+    /* Contact */
     .contact {
         padding: 40px 0;
     }
