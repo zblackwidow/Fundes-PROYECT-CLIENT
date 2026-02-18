@@ -643,9 +643,28 @@ h6 {
 /* CONTACT SECTION */
 .contact {
     background-color: #FFFFFF;
-    padding: 80px 0;
-}
+    min-height: 1410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.contact-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid blue;
+    min-height: 1250px;
+}
+.contact-content{
+    max-width: 620px;
+    border: 1px solid red;
+}
+.contact-form{
+    max-width: 636px;
+    border: 1px solid greenyellow;
+}
 
 
 
