@@ -14,7 +14,6 @@
     --btn-color: #4B9ED9;
     --title-form-color: #282943;
     --footer-color: #11203F;
-
     --fuente-principal: 'Poppins', sans-serif;
     --fuente-secundaria: 'Open Sans', sans-serif;
 }
@@ -105,9 +104,9 @@ h6 {
     background: #F1F7FF;
 }
 
-.wrapper-consulting {
+/* .wrapper-consulting {
     max-width: 1296px;
-}
+} */
 
 .impact-intro {
     display: flex;
@@ -573,9 +572,13 @@ h6 {
 }
 
 .brands-title {
-    width: 993px;
+    width: 100%;
+    max-width: 993px;
     gap: 12px;
+    padding: 0 20px;
 }
+
+
 
 .brands-title h2 {
     font-family: var(--fuente-secundaria);
@@ -635,6 +638,7 @@ h6 {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
@@ -643,13 +647,14 @@ h6 {
 /* CONTACT SECTION */
 .contact {
     background-color: #FFFFFF;
-    min-height: 1410px;
+    /* min-height: 1410px; */
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-.contact-wrapper{
+
+.contact-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -657,18 +662,25 @@ h6 {
     border: 1px solid blue;
     min-height: 1250px;
 }
-.contact-content{
+
+.contact-content {
     max-width: 620px;
     border: 1px solid red;
 }
-.contact-form{
+
+.contact-form {
     max-width: 636px;
-    border: 1px solid greenyellow;
+}
+
+.contact-content,
+p {
+    text-align: center;
 }
 
 
 
 @media (max-width: 1024px) {
+
     /* Wrapper general */
     .wrapper {
         padding: 0 30px;
@@ -758,7 +770,8 @@ h6 {
     }
 
     .methodology-media {
-        display: none; /* Ocultar imagen en tablet */
+        display: none;
+        /* Ocultar imagen en tablet */
     }
 
     .methodology-content {
@@ -808,7 +821,8 @@ h6 {
     .book-media img {
         width: 100%;
         max-width: 400px;
-        transform: translateX(0); /* Reset transform */
+        transform: translateX(0);
+        /* Reset transform */
     }
 
     /* Brands */
@@ -845,10 +859,17 @@ h6 {
     .contact {
         padding: 60px 0;
     }
+
+    .contact-content,
+    .contact-form {
+        max-width: auto;
+    }
+
 }
 
 
 @media (max-width: 768px) {
+
     /* Wrapper general */
     .wrapper {
         padding: 0 20px;
@@ -1027,10 +1048,16 @@ h6 {
     .contact {
         padding: 50px 0;
     }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
 }
 
 
 @media (max-width: 480px) {
+
     /* Wrapper general */
     .wrapper {
         padding: 0 15px;
@@ -1243,4 +1270,5 @@ h6 {
     .contact {
         padding: 40px 0;
     }
+
 }
