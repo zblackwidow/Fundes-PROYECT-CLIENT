@@ -2,15 +2,7 @@
     width: 100%;
     background: var(--footer-color);
     color: white;
-    padding: 60px 0 30px;
-}
-
-
-/* FOOTER */
-.footer {
-    width: 100%;
-    background: var(--footer-color);
-    color: white;
+    height: 437px;
     padding: 60px 0 30px;
 }
 
