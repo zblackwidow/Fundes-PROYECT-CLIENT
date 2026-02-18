@@ -1,4 +1,3 @@
-// Contador animado con efecto vertical (slot machine)
 function animateCounterVertical(element, target, hasPlus) {
     const duration = 2000;
     const targetStr = target.toString();

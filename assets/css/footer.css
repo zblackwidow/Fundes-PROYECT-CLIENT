@@ -58,7 +58,6 @@
     filter: brightness(0) invert(1);
 }
 
-/* Sección derecha - Contacto */
 .footer-contact {
     display: flex;
     flex-direction: column;
@@ -96,7 +95,6 @@
     color: var(--secondary-color);
 }
 
-/* Footer bottom - Copyright */
 .footer-bottom {
     max-width: 1440px;
     margin: 0 auto;
@@ -123,7 +121,6 @@
     text-decoration: underline;
 }
 
-/* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
     .footer {
         padding: 40px 0 20px;

@@ -649,7 +649,6 @@ h6 {
 
 
 
-/* TABLET GRANDE - 1024px y menos */
 @media (max-width: 1024px) {
     /* Wrapper general */
     .wrapper {

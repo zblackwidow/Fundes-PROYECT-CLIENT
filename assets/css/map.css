@@ -42,7 +42,6 @@
     display: block;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .map-nav {
         width: 40px;

@@ -243,7 +243,6 @@ goalCards.forEach(card => {
     const header = card.querySelector('.goal-card-header');
 
     header.addEventListener('click', () => {
-        // Toggle la card actual
         card.classList.toggle('active');
     });
 });
