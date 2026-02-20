@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,6 +14,7 @@
     --footer-color: #11203F;
     --fuente-principal: 'Poppins', sans-serif;
     --fuente-secundaria: 'Open Sans', sans-serif;
+    --fuente-numerica: 'Manrope', sans-serif;
 }
 
 body {
@@ -98,19 +97,28 @@ h6 {
 }
 
 /* CONSULTING SECTION */
-.consulting {
-    width: 100%;
-    padding: 80px 0;
-    background: #F1F7FF;
+.wrapper-consulting {
+    width: 1374px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding-top: 106px;
 }
 
-/* .wrapper-consulting {
-    max-width: 1296px;
-} */
+.consulting {
+    width: 100%;
+    background: #F1F7FF;
+    background: url('../img/patterns/patron-de-lineas-celeste.png');
+    background-repeat: no-repeat;
+    background-position: bottom -300px right -34%;
+    background-size: 1070px;
+    position: relative;
+}
 
 .impact-intro {
     display: flex;
-    gap: 54px;
+    gap: 24px;
     align-items: center;
 }
 
@@ -134,39 +142,39 @@ h6 {
 
 .impact-image {
     position: relative;
-    width: 100%;
-    max-width: 578px;
+    width: 545px;
     height: auto;
-    min-height: 495px;
+    bottom: 21px;
 }
 
 .impact-image .main-image {
     position: relative;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    height: auto;
+    bottom: -54px;
+    left: -5px;
+    max-width: 471px;
+    max-height: 435.74px;
     z-index: 2;
 }
 
 .impact-image .pattern-circles {
     position: absolute;
-    top: 0px;
-    right: -88px;
+    top: -4px;
+    right: -108px;
     z-index: 1;
 }
 
 .impact-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    width: 700px;
+    padding-left: 51px;
 }
 
 .badge {
     display: inline-block;
     padding: 8px 20px;
     color: var(--primary-color);
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-secundaria);
     font-size: 20px;
     font-weight: 600;
     border: 1px solid var(--primary-color);
@@ -175,25 +183,27 @@ h6 {
 }
 
 .impact-content h2 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-secundaria);
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--primary-color);
     line-height: 1.3;
+    margin: 26px 0;
 }
 
 .impact-content p {
     font-family: var(--fuente-secundaria);
     font-size: 18px;
-    line-height: 1.7;
+    font-weight: 400;
+    line-height: 1.2;
     color: #5A6C7D;
 }
 
 /* IMPACT GOALS SECTION */
 .impact-goals {
     max-width: 1296px;
-    margin: 0 auto;
-    padding: 35px 31px;
+    height: auto;
+    /* padding: 35px 31px; */
     background: linear-gradient(180deg, #027592 0%, #1D477E 75%);
     position: relative;
     border-radius: 24px;
@@ -213,20 +223,20 @@ h6 {
 }
 
 .impact-goals h3 {
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-secundaria);
     font-size: 40px;
     font-weight: 600;
     color: white;
     text-align: center;
-    margin-bottom: 48px;
+    padding-top: 40px;
 }
 
 .goals-grid {
-    width: 100%;
     min-height: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 40px 48px;
+    margin: 48px 40px 40px 40px;
 }
 
 .goal-card {
@@ -243,7 +253,8 @@ h6 {
     transition: all 0.3s;
     overflow: hidden;
     align-self: flex-start;
-    min-height: 123px
+    min-height: 123px;
+    max-width: 384px;
 }
 
 .goal-card.active {
@@ -385,7 +396,7 @@ h6 {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0px 0px 34px 3px;
+    padding: 125px 0px 34px 4px;
     gap: 24px;
     justify-content: flex-end;
     align-items: center;
@@ -444,7 +455,6 @@ h6 {
 /* IMPACT SECTION */
 .impact {
     background: #F1F7FF;
-    padding: 60px 0;
 }
 
 .wrapper-impact {
@@ -452,9 +462,12 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 40px;
+    max-width: 1280px;
+    margin-top: 80px;
+}
+
+.impact-map {
+    margin-bottom: 40px;
 }
 
 .impact-map p {
@@ -473,52 +486,44 @@ h6 {
     color: var(--primary-color);
     line-height: 1.3;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
-.impact-note p {
-    font-family: var(--fuente-secundaria);
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.7;
-    color: #213754;
-    max-width: 1280px;
-    text-align: center;
-    margin-top: 20px;
-}
+
 
 /* BOOK SECTION */
 .book {
-    background: linear-gradient(180deg, #027592 0%, #1D477E 75%);
+    background: url('../img/patterns/patron-de-lineas-blanco.png'), linear-gradient(180deg, #027592 0%, #1D477E 75%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 106% right -8%, center;
     height: 606px;
     width: 100%;
 }
 
 .bookanual {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     color: #FFFFFF;
-    gap: 110px;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 40px;
+    width: 100%;
 }
 
 .book-content {
-    max-width: 598px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 50%;
+    height: 100%;
 }
 
 .book-content h2 {
     font-family: var(--fuente-principal);
     font-size: 40px;
     font-weight: 700;
+    height: 64px;
     color: white;
     text-align: center;
 }
@@ -533,7 +538,7 @@ h6 {
 
 .book-content p {
     max-width: 584px;
-    padding: 20px 0;
+    padding: 16px 0 36px 0;
 }
 
 .book-content a {
@@ -555,12 +560,18 @@ h6 {
     transition: all 0.3s;
 }
 
+.book-media {
+    padding-left: 40px;
+    height: 100%;
+    position: relative;
+    top: 50px;
+    left: 61px;
+}
+
 .book-media img {
     width: 100%;
     max-width: 663px;
     height: auto;
-    padding-top: 22px;
-    padding-left: 5px;
 }
 
 /* BRANDS SECTION */
@@ -577,7 +588,7 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 100px;
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
@@ -590,7 +601,9 @@ h6 {
     padding: 0 20px;
 }
 
-
+.brands-title>span {
+    font-family: var(--fuente-numerica);
+}
 
 .brands-title h2 {
     font-family: var(--fuente-secundaria);
@@ -658,12 +671,17 @@ h6 {
 
 /* CONTACT SECTION */
 .contact {
-    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/patterns/patron-de-lineas-celeste.png');
+    background-position: center calc(100% + 500px);
 
+    background-size: 1178px;
+    background-repeat: no-repeat;
 }
+
 
 .contact-wrapper {
     display: flex;
@@ -677,32 +695,50 @@ h6 {
     max-width: 620px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.contact-title>h2 {
+    text-align: center;
+    font-family: var(--fuente-principal);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgba(40, 41, 67, 1);
+}
+
+.contact-title>p {
+    font-family: var(--fuente-secundaria);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: start;
+    color: rgba(33, 55, 84, 1);
 }
 
 .contact-form {
     max-width: 636px;
 }
 
-.contact-content p {
-    text-align: center;
-}
-
 .contact-img {
     position: relative;
 }
 
-.contact-img img:first-child {
+.circulo-decorativo-contact {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
+    top: 63px;
+    left: -140px;
+    z-index: 0;
+    width: 536px;
 }
 
-.contact-img img {
-    max-width: 392px;
-    height: auto;
-    object-fit: contain;
 
+.contact-img img:last-child {
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+    width: 392px;
+    height: 392px;
 }
 
 
@@ -1098,9 +1134,10 @@ h6 {
     .contact-wrapper {
         flex-direction: column;
     }
-    .contact-content{
+
+    .contact-content {
         flex-direction: column-reverse;
-        gap:30px;
+        gap: 30px;
     }
 
     .contact-img img:first-child {
@@ -1327,7 +1364,8 @@ h6 {
     .contact {
         padding: 40px 0;
     }
-    .contact-img img{
+
+    .contact-img img {
         width: 100%;
         padding: 0 20px;
     }

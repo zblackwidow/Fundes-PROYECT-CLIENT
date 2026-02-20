@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
 .metrics-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 60px 0;
-    gap: 40px;
+    gap: 70px;
 }
 
 .metric-item {
@@ -18,9 +18,10 @@
 
 .metric-number {
     font-family: 'Manrope', sans-serif;
-    font-size: 72px;
+    font-size: 80px;
     font-weight: 700;
     color: #11203F;
+    letter-spacing: 6px;
     line-height: 1;
     overflow: hidden;
     min-height: 80px;
@@ -34,10 +35,20 @@
 }
 
 .metric-label {
-    font-family:  'Manrope', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
     color: #11203F;
+}
+
+.impact-note p {
+    font-family: var(--fuente-secundaria);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #213754;
+    text-align: center;
+    font-style: italic;
 }
 
 @media (max-width: 1024px) {

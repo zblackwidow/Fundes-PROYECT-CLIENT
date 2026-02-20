@@ -62,12 +62,21 @@ textarea {
     border: 1px solid rgba(75, 158, 217, 1)
 }
 
+.contact-divider {
+    width: 476px;
+    height: 0;
+    border: none;
+    border-top: 1px solid rgba(172, 187, 206, 1);
+    opacity: 1;
+    margin: 40px 0;
+}
+
 .contact p {
     font-family: var(--fuente-secundaria);
     font-weight: 400;
     font-size: 20px;
     color: rgba(31, 72, 126, 1);
-    padding: 40px 0;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {

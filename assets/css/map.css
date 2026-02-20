@@ -1,6 +1,8 @@
 .geo-map {
     position: relative;
-    width: 100%;
+    width: 1294px;
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
 
 .map-slide {
@@ -30,15 +32,17 @@
 
 .map-prev {
     left: 20px;
+    bottom: 244px;
 }
 
 .map-next {
-    right: 20px;
+    right: -73px;
+    bottom: 244px;
 }
 
 .map-nav img {
-    width: 47px;
-    height: 82px;
+    width: 38px;
+    height: 66px;
     display: block;
 }
 
