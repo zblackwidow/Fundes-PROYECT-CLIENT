@@ -229,12 +229,14 @@ const countries = [
 
 const select = document.getElementById('country');
 
-countries.forEach(country => {
-    const option = document.createElement('option');
-    option.value = country.code;
-    option.textContent = country.name;
-    select.appendChild(option);
-});
+if (select) {
+    countries.forEach(country => {
+        const option = document.createElement('option');
+        option.value = country.code;
+        option.textContent = country.name;
+        select.appendChild(option);
+    });
+}
 
 
 const goalCards = document.querySelectorAll('.goal-card');

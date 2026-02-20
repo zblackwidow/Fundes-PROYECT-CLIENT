@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F1F7FF">
     <title>Fundes</title>
+    <!-- Google Fonts precargado para evitar FOUC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/map.css">
     <link rel="stylesheet" href="assets/css/contador.css">
+    <style>
+        html { background-color: #F1F7FF; }
+    </style>
 </head>
 
 <body>
@@ -286,23 +294,25 @@
                     <div class="impact-metrics">
                         <ul class="metrics-list">
                             <li class="metric-item">
-                                <span class="metric-number" data-target="40">+01</span>
+                                <span class="metric-number" data-target="40">+40</span>
                                 <span class="metric-label">Años de experiencia</span>
                             </li>
                             <li class="metric-item">
-                                <span class="metric-number" data-target="2000000">0000001</span>
+                                <span class="metric-number" data-target="2000000">2000000</span>
                                 <span class="metric-label">Mipymes impactadas</span>
                             </li>
                             <li class="metric-item">
-                                <span class="metric-number" data-target="24">01</span>
+                                <span class="metric-number" data-target="24">24</span>
                                 <span class="metric-label">Países</span>
                             </li>
                             <li class="metric-item">
-                                <span class="metric-number" data-target="600">+001</span>
+                                <span class="metric-number" data-target="600">+600</span>
                                 <span class="metric-label">Proyectos</span>
                             </li>
                         </ul>
-                        <p class="impact-note">Desde el 2014</p>
+                        <div class="impact-note">
+                            <p>Desde el 2014</p>
+                        </div>
                     </div>
 
                     <div class="geo-map">
@@ -341,9 +351,7 @@
                         </button>
                     </div>
 
-
                 </div>
-            </div>
             </div>
         </section>
         <section class="book">
@@ -369,12 +377,11 @@
         <section class="brands">
             <div class="wrapper brand-wrapper">
                 <div class="brands-title">
-                    <h2>+de 0 0 1 Organizaciones</h2>
+                    <h2>+de 600 Organizaciones</h2>
                     <h3>han confiado en nuestro trabajo</h3>
                 </div>
                 <div class="brands-slider">
                     <div class="brands-track">
-                        <!-- Logos originales -->
                         <div class="brand-item">
                             <img src="assets/img/brands/pepsico.png" alt="Pepsico logo" loading="lazy">
                         </div>
@@ -385,14 +392,16 @@
                             <img src="assets/img/brands/walmart.png" alt="Walmart logo" loading="lazy">
                         </div>
                         <div class="brand-item">
-                            <img src="assets/img/brands/american-express.png" alt="American Express logo"
-                                loading="lazy">
+                            <img src="assets/img/brands/american-express.png" alt="American Express logo" loading="lazy">
                         </div>
                         <div class="brand-item">
                             <img src="assets/img/brands/visa.png" alt="Visa logo" loading="lazy">
                         </div>
                         <div class="brand-item">
                             <img src="assets/img/brands/corficolombiana.png" alt="Corficolombiana logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/nestle.png" alt="Nestlé logo" loading="lazy">
                         </div>
                         <div class="brand-item">
                             <img src="assets/img/brands/pepsico.png" alt="Pepsico logo" loading="lazy">
@@ -404,14 +413,16 @@
                             <img src="assets/img/brands/walmart.png" alt="Walmart logo" loading="lazy">
                         </div>
                         <div class="brand-item">
-                            <img src="assets/img/brands/american-express.png" alt="American Express logo"
-                                loading="lazy">
+                            <img src="assets/img/brands/american-express.png" alt="American Express logo" loading="lazy">
                         </div>
                         <div class="brand-item">
                             <img src="assets/img/brands/visa.png" alt="Visa logo" loading="lazy">
                         </div>
                         <div class="brand-item">
                             <img src="assets/img/brands/corficolombiana.png" alt="Corficolombiana logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/nestle.png" alt="Nestlé logo" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -420,15 +431,18 @@
         <section class="contact">
             <div class="wrapper contact-wrapper">
                 <div class="contact-content">
-                    <div class="contact-img">
-                        <img src="assets/img/patterns/Circulo.png" alt="circulo decorativo">
-                        <img src="assets/img/images/Eclipse.png" alt="mujer trabajadora costurera">
+                    <div class="contact-title">
+                        <h2>¡Construyamos soluciones de impacto sostenible!</h2>
+                        <p>Contactanos y descubre cómo FUNDES puede apoyarte en el diseño y ejecución de tus proyectos
+                            que
+                            impulsan el desarrollo de las mipymes.</p>
                     </div>
-
-                    <h2>¡Construyamos soluciones de impacto sostenible!</h2>
-                    <p>Contactanos y descubre cómo FUNDES puede apoyarte en el diseño y ejecución de tus proyectos que
-                        impulsan el desarrollo de las mipymes.</p>
+                    <div class="contact-img">
+                        <img src="assets/img/patterns/Circulo.png" alt="circulo decorativo" loading="lazy">
+                        <img src="assets/img/images/Eclipse.png" alt="mujer trabajadora costurera" loading="lazy">
+                    </div>
                 </div>
+
                 <div class="contact-form">
                     <form action="#" class="form">
                         <div class="form-group">

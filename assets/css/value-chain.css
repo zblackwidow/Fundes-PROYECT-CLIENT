@@ -1,0 +1,723 @@
+body {
+    background-color: rgba(241, 247, 255, 1);
+}
+
+.hero-secondary {
+    width: 100%;
+    height: 400px;
+    background: url('../img/images/Familia-en-tienda-de-barrio.jpg') no-repeat center center;
+    background-position: 0 -126px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 80px;
+}
+
+.hero-secondary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(6, 36, 134, 0.45);
+    z-index: 1;
+}
+
+.hero-secondary .wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+}
+
+.hero-secondary h1 {
+    font-family: var(--fuente-principal);
+    font-size: 72px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2;
+}
+
+.wrapper-hero-chain {
+    display: flex;
+    align-items: center;
+    ;
+}
+
+.icon-hero {
+    width: 64px;
+    height: 64px;
+    margin-right: 32px;
+}
+
+/* ─── DESCRIPTION SECONDARY ──────────────── */
+.chain-description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 80px 120px;
+}
+
+
+.description-secondary h2 {
+    font-family: var(--fuente-principal);
+    font-size: 48px;
+    font-weight: 600;
+    color: rgba(29, 71, 126, 1);
+    margin-bottom: 32px;
+    line-height: 1.25;
+
+}
+
+.description-secondary p {
+    font-family: var(--fuente-secundaria);
+    font-size: 18px;
+    line-height: 1.7;
+    color: #5A6C7D;
+    margin-bottom: 24px;
+}
+
+.description-secondary a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background: var(--btn-color);
+    color: rgba(17, 32, 63, 1);
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid var(--btn-color);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.description-secondary a:hover {
+    background: #3a8bc7;
+    transform: translateY(-2px);
+}
+
+/* ─── SOLUTIONS ───────────────────────────── */
+
+.solutions>.wrapper {
+    max-width: 1344px;
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.solutions h2 {
+    font-family: var(--fuente-principal);
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 32px;
+    line-height: 1.25;
+}
+
+.solutions>.wrapper>p {
+    font-family: var(--fuente-secundaria);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(6, 50, 49, 1);
+    margin-bottom: 80px;
+}
+
+/* Grid 3 columnas */
+.solution-grid-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* Grid 2 columnas */
+.solution-grid-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* Grid 4 cards (2x2) — Economía Verde */
+.solution-grid-four {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* ─── SOLUTION CARD ───────────────────────── */
+.solution-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 554px;
+    cursor: pointer;
+}
+
+.solution-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay base — degradado sutil desde abajo */
+.solution-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(17, 32, 63, 0.8) 0%, rgba(17, 32, 63, 0.2) 55%, transparent 100%);
+    z-index: 2;
+    transition: background 0.4s ease;
+}
+
+/* Overlay hover — cubre toda la card con el mismo color */
+.solution-card:hover::after {
+    background: linear-gradient(to top, rgba(17, 32, 63, 0.95) 0%, rgba(17, 32, 63, 0.7) 50%, rgba(17, 32, 63, 0.4) 100%);
+}
+
+/* Contenedor de texto — anclado en bottom, sube en hover */
+.solution-card .card-titles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 24px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+
+.solution-card:hover .card-titles {
+    transform: translateY(-16px);
+}
+
+.solution-card .card-titles h3 {
+    font-family: var(--fuente-principal);
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.25;
+}
+
+/* descripcion oculta */
+.solution-card .card-titles .card-desc {
+    font-family: var(--fuente-secundaria);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s ease, opacity 0.35s ease 0.05s;
+}
+
+.solution-card:hover .card-titles .card-desc {
+    max-height: 300px;
+    opacity: 1;
+}
+
+/* ─── BRIDGES ─────────────────────────────── */
+.bridges {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.bridges h2 {
+    font-family: var(--fuente-principal);
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.bridges>.wrapper>p {
+    font-family: var(--fuente-secundaria);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: rgba(6, 50, 49, 1);
+    margin-bottom: 48px;
+}
+
+/* círculos — pendiente */
+
+/* ─── FEATURED CASES ──────────────────────── */
+.featured-cases {
+    width: 100%;
+}
+
+.featured-cases h2 {
+    font-family: var(--fuente-principal);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    line-height: 1.25;
+}
+
+.cases-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    padding: 0 80px;
+}
+
+/* ─── CASE CARD (solucion-card) ───────────── */
+.solucion-card {
+    width: 380px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+
+.solucion-card img {
+    max-width: 331px;
+    height: 312px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    background: #d0dce8;
+}
+
+.solucion-card .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.solucion-card h3 {
+    font-family: var(--fuente-principal);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+.solucion-card .card-subtitle {
+    font-family: var(--fuente-secundaria);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.solucion-card .card-description {
+    font-family: var(--fuente-secundaria);
+    font-size: 14px;
+    line-height: 1.65;
+    color: #5A6C7D;
+    flex: 1;
+}
+
+.btn-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    background: var(--btn-color);
+    color: white;
+    font-family: var(--fuente-principal);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    align-self: flex-start;
+    transition: background 0.3s;
+    margin-top: 6px;
+}
+
+.btn-card:hover {
+    background: #3a8bc7;
+}
+
+/* ─── RELATED CONTENT ─────────────────────── */
+.related-content {
+    width: 100%;
+    padding: 80px 0;
+    background: white;
+}
+
+.related-content h2 {
+    font-family: var(--fuente-principal);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 32px;
+    line-height: 1.25;
+}
+
+.content-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid #E8EEF4;
+}
+
+.content-card:last-child {
+    border-bottom: none;
+}
+
+.content-card img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background: #d0dce8;
+}
+
+.content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.content-fecha {
+    font-family: var(--fuente-secundaria);
+    font-size: 12px;
+    color: #8A9BB0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.content-info h3 {
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+.content-info p {
+    font-family: var(--fuente-secundaria);
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5A6C7D;
+}
+
+/* ─── CONTACT CTA ─────────────────────────── */
+.contact-value-chains {
+    width: 100%;
+    padding: 80px 0;
+    background: var(--footer-color);
+}
+
+.contact-value-chains .wrapper {
+    text-align: center;
+}
+
+.contact-value-chains h2 {
+    font-family: var(--fuente-principal);
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 36px;
+    line-height: 1.25;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 36px;
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--btn-color);
+    color: white;
+    border: 2px solid var(--btn-color);
+}
+
+.btn-primary:hover {
+    background: #3a8bc7;
+    border-color: #3a8bc7;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE — TABLET 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+
+    .hero-secondary {
+        height: 320px;
+    }
+
+    .hero-secondary h1 {
+        font-size: 44px;
+    }
+
+    .description-secondary {
+        padding: 60px 0;
+    }
+
+    .description-secondary h2 {
+        font-size: 34px;
+    }
+
+    .solutions {
+        padding: 60px 0;
+    }
+
+    .solutions h2 {
+        font-size: 30px;
+    }
+
+    .solution-grid-three {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* La 3ra card ocupa todo el ancho */
+    .solution-grid-three .solution-card:last-child {
+        grid-column: 1 / -1;
+        height: 260px;
+    }
+
+    .solution-grid-four {
+        grid-template-columns: 1fr;
+    }
+
+    .bridges {
+        padding: 60px 0;
+    }
+
+    .bridges h2 {
+        font-size: 30px;
+    }
+
+    .bridge-node {
+        width: 130px;
+        height: 130px;
+        font-size: 14px;
+    }
+
+    .featured-cases {
+        padding: 60px 0;
+    }
+
+    .featured-cases h2 {
+        font-size: 30px;
+    }
+
+    .cases-grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-content {
+        padding: 60px 0;
+    }
+
+    .related-content h2 {
+        font-size: 30px;
+    }
+
+    .contact-value-chains {
+        padding: 60px 0;
+    }
+
+    .contact-value-chains h2 {
+        font-size: 34px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE 768px
+   ============================================ */
+@media (max-width: 768px) {
+
+    .hero-secondary {
+        height: 260px;
+    }
+
+    .hero-secondary h1 {
+        font-size: 32px;
+    }
+
+    .description-secondary {
+        padding: 48px 0;
+    }
+
+    .description-secondary h2 {
+        font-size: 28px;
+    }
+
+    .description-secondary p {
+        font-size: 16px;
+    }
+
+    .solutions {
+        padding: 48px 0;
+    }
+
+    .solutions h2 {
+        font-size: 26px;
+    }
+
+    .solution-grid-three,
+    .solution-grid-two,
+    .solution-grid-four {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-grid-three .solution-card:last-child {
+        grid-column: auto;
+    }
+
+    .solution-card {
+        height: 260px;
+    }
+
+    .bridges {
+        padding: 48px 0;
+    }
+
+    .bridges h2 {
+        font-size: 26px;
+    }
+
+    .bridges-circles {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bridge-connector {
+        display: none;
+    }
+
+    .bridge-node {
+        width: 110px;
+        height: 110px;
+        font-size: 13px;
+    }
+
+    .featured-cases {
+        padding: 48px 0;
+    }
+
+    .featured-cases h2 {
+        font-size: 26px;
+    }
+
+    .cases-grid-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .related-content {
+        padding: 48px 0;
+    }
+
+    .related-content h2 {
+        font-size: 26px;
+    }
+
+    .content-card img {
+        width: 90px;
+        height: 64px;
+    }
+
+    .contact-value-chains {
+        padding: 48px 0;
+    }
+
+    .contact-value-chains h2 {
+        font-size: 28px;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE 480px
+   ============================================ */
+@media (max-width: 480px) {
+
+    .hero-secondary {
+        height: 220px;
+    }
+
+    .hero-secondary h1 {
+        font-size: 26px;
+    }
+
+    .description-secondary h2 {
+        font-size: 24px;
+    }
+
+    .solutions h2,
+    .bridges h2,
+    .featured-cases h2,
+    .related-content h2 {
+        font-size: 22px;
+    }
+
+    .contact-value-chains h2 {
+        font-size: 24px;
+    }
+
+    .solution-card {
+        height: 220px;
+    }
+
+    .solution-card .card-titles h3 {
+        font-size: 17px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

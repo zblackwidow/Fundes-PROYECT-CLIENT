@@ -222,7 +222,7 @@ h6 {
 }
 
 .goals-grid {
-    width: 1216px;
+    width: 100%;
     min-height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -231,7 +231,6 @@ h6 {
 
 .goal-card {
     flex: 0 0 calc(33.333% - 32px);
-    width: 384px;
     background: #FFFFFF1A;
     border-radius: 10px;
     box-shadow:
@@ -249,6 +248,18 @@ h6 {
 
 .goal-card.active {
     background: linear-gradient(180deg, rgba(2, 117, 146, 0.4) 0%, rgba(2, 117, 146, 0.8) 100%);
+}
+
+.goal-card.active .toggle-icon {
+    font-size: 0;
+    line-height: 0;
+}
+
+.goal-card.active .toggle-icon::before {
+    content: '−';
+    font-size: 32px;
+    line-height: 1;
+    display: block;
 }
 
 .goal-card-header {
@@ -371,7 +382,7 @@ h6 {
 
 .methodology-content {
     width: 620px;
-    height: 476px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     padding: 0px 0px 34px 3px;
@@ -545,7 +556,8 @@ h6 {
 }
 
 .book-media img {
-    width: 663px;
+    width: 100%;
+    max-width: 663px;
     height: auto;
     padding-top: 22px;
     padding-left: 5px;
@@ -647,7 +659,6 @@ h6 {
 /* CONTACT SECTION */
 .contact {
     background-color: #FFFFFF;
-    /* min-height: 1410px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -659,24 +670,40 @@ h6 {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    border: 1px solid blue;
-    min-height: 1250px;
+    padding: 80px 0;
 }
 
 .contact-content {
     max-width: 620px;
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form {
     max-width: 636px;
 }
 
-.contact-content,
-p {
+.contact-content p {
     text-align: center;
 }
 
+.contact-img {
+    position: relative;
+}
+
+.contact-img img:first-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.contact-img img {
+    max-width: 392px;
+    height: auto;
+    object-fit: contain;
+
+}
 
 
 @media (max-width: 1024px) {
@@ -770,8 +797,27 @@ p {
     }
 
     .methodology-media {
+        display: block;
+        flex: none;
+        width: 100%;
+        max-width: 380px;
+        height: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .methodology-media img:first-child {
         display: none;
-        /* Ocultar imagen en tablet */
+    }
+
+    .woman-methodology {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        object-fit: cover;
+        object-position: top center;
     }
 
     .methodology-content {
@@ -1052,7 +1098,14 @@ p {
     .contact-wrapper {
         flex-direction: column;
     }
+    .contact-content{
+        flex-direction: column-reverse;
+        gap:30px;
+    }
 
+    .contact-img img:first-child {
+        display: none;
+    }
 }
 
 
@@ -1145,6 +1198,10 @@ p {
         font-size: 28px;
         width: 28px;
         height: 28px;
+    }
+
+    .goal-card.active .toggle-icon::before {
+        font-size: 28px;
     }
 
     .goal-card.active .goal-card-content {
@@ -1270,5 +1327,8 @@ p {
     .contact {
         padding: 40px 0;
     }
-
+    .contact-img img{
+        width: 100%;
+        padding: 0 20px;
+    }
 }

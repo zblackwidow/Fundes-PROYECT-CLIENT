@@ -9,11 +9,10 @@
 .footer-wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    padding-bottom: 40px;
+    padding: 0 20px 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -149,5 +148,33 @@
         flex-direction: column;
         gap: 15px;
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .footer-wrapper {
+        gap: 28px;
+        padding: 0 15px 28px;
+    }
+
+    .footer-logo {
+        width: 120px;
+    }
+
+    .footer-contact h3 {
+        font-size: 20px;
+    }
+
+    .contact-list li {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        padding: 20px 15px 0;
+        font-size: 12px;
     }
 }
