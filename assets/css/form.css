@@ -63,7 +63,8 @@ textarea {
 }
 
 .contact-divider {
-    width: 476px;
+    width: 100%;
+    max-width: 476px;
     height: 0;
     border: none;
     border-top: 1px solid rgba(172, 187, 206, 1);
@@ -126,10 +127,15 @@ textarea {
     .contact button {
         font-size: 15px;
         padding: 12px 20px;
+        text-align: center;
     }
 
     .contact p {
         font-size: 15px;
-        padding: 20px 0;
+        padding-top: 50px;
+        margin: 0;
+    }
+    .contact-divider{
+        margin: 40px 0 0 0 ;
     }
 }

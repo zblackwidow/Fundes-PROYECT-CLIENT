@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 :root {
@@ -88,7 +87,7 @@ h6 {
     margin-top: 9px;
     margin-bottom: 7px;
     background: var(--secondary-color);
-    padding: 0px 8px 9px 0px;
+    padding: 0px 8px 9px 10px;
     display: inline-block;
 }
 
@@ -98,7 +97,8 @@ h6 {
 
 /* CONSULTING SECTION */
 .wrapper-consulting {
-    width: 1374px;
+    width: 100%;
+    max-width: 1374px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +142,8 @@ h6 {
 
 .impact-image {
     position: relative;
-    width: 545px;
+    width: 100%;
+    max-width: 545px;
     height: auto;
     bottom: 21px;
 }
@@ -166,7 +167,8 @@ h6 {
 .impact-content {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     padding-left: 51px;
 }
 
@@ -487,6 +489,7 @@ h6 {
     background-position: top 106% right -8%, center;
     height: 606px;
     width: 100%;
+    overflow: hidden;
 }
 
 .bookanual {
@@ -590,9 +593,7 @@ h6 {
     padding: 0 20px;
 }
 
-.brands-title>span {
-    font-family: var(--fuente-numerica);
-}
+
 
 .brands-title h2 {
     font-family: var(--fuente-secundaria);
@@ -646,6 +647,10 @@ h6 {
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.1);
+}
+
+.brands-title span {
+    font-family: var(--fuente-numerica);
 }
 
 @keyframes scroll {
@@ -726,12 +731,16 @@ h6 {
     position: relative;
     z-index: 1;
     object-fit: contain;
-    width: 392px;
-    height: 392px;
+    width: 100%;
+    max-width: 392px;
+    height: auto;
 }
 
 
 @media (max-width: 1024px) {
+    .impact-content {
+        width: 100%;
+    }
 
     /* Wrapper general */
     .wrapper {
@@ -780,10 +789,17 @@ h6 {
         height: auto;
         position: relative;
         left: 0;
+        bottom: 0;
     }
 
     .impact-image .pattern-circles {
         display: none;
+    }
+
+    .impact-content {
+        padding-left: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
     .impact-content h2 {
@@ -889,11 +905,20 @@ h6 {
         padding: 40px 20px;
     }
 
+    .book-content {
+        width: 100%;
+    }
+
+    .book-media {
+        top: 0;
+        left: 0;
+        padding-left: 0;
+    }
+
     .book-media img {
         width: 100%;
         max-width: 400px;
         transform: translateX(0);
-        /* Reset transform */
     }
 
     /* Brands */
@@ -931,9 +956,25 @@ h6 {
         padding: 60px 0;
     }
 
-    .contact-content,
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 30px;
+    }
+
+    .contact-content {
+        max-width: 636px;
+        width: 100%;
+    }
+
     .contact-form {
-        max-width: auto;
+        max-width: 636px;
+        width: 100%;
+    }
+
+    .circulo-decorativo-contact {
+        display: none;
     }
 
 }
@@ -952,8 +993,8 @@ h6 {
     }
 
     .hero .wrapper {
-        padding-top: 150px;
-        padding-left: 20px;
+        padding-top: 165px;
+        padding-left: 63px;
     }
 
     .hero h1 {
@@ -998,11 +1039,13 @@ h6 {
     }
 
     .goals-grid {
+        margin: 0;
         gap: 24px;
     }
 
     .goal-card {
         flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .goal-card-header {
@@ -1059,6 +1102,7 @@ h6 {
     }
 
     .book {
+        background-position: top 158% right -8%, center;
         padding: 30px 15px;
     }
 
@@ -1075,6 +1119,8 @@ h6 {
     }
 
     .book-media img {
+        position: relative;
+        left: 50px;
         max-width: 350px;
         transform: translateX(0);
     }
@@ -1132,6 +1178,10 @@ h6 {
     .contact-img img:first-child {
         display: none;
     }
+
+    .contact-img img:last-child {
+        max-width: 280px;
+    }
 }
 
 
@@ -1148,7 +1198,7 @@ h6 {
     }
 
     .hero .wrapper {
-        padding-top: 100px;
+        padding-top: 150px;
         padding-left: 15px;
     }
 
@@ -1204,6 +1254,7 @@ h6 {
 
     .goals-grid {
         gap: 20px;
+        margin: 0;
     }
 
     .goal-card-header {
@@ -1310,6 +1361,7 @@ h6 {
 
     .book-media img {
         max-width: 280px;
+
     }
 
     .book-content a {
@@ -1349,6 +1401,7 @@ h6 {
         max-width: 100px;
     }
 
+
     /* Contact */
     .contact {
         padding: 40px 0;
@@ -1358,4 +1411,31 @@ h6 {
         width: 100%;
         padding: 0 20px;
     }
+}
+
+@media (max-width: 375px) {
+
+    /* Book — la imagen tiene left: 50px desde 768px y nunca se reseteó */
+    .book-media img {
+        max-width: 100%;
+        position: relative;
+        left: 35px;
+    }
+
+    /* Hero — más ajustado en pantallas muy pequeñas */
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    /* Consulting */
+    .impact-content h2 {
+        font-size: 20px;
+    }
+    .contact{
+        text-align: center;
+    }
+    .contact-title>h2{
+        font-size: 30px;
+    }
+
 }
