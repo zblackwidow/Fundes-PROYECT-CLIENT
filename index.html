@@ -5,11 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F1F7FF">
     <title>Fundes</title>
+    <!-- Google Fonts precargado para evitar FOUC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Manrope:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/contador.css">
+    <style>
+        html { background-color: #F1F7FF; }
+    </style>
 </head>
 
 <body>
@@ -89,16 +99,16 @@
                     <div class="impact-intro">
                         <div class="impact-image">
                             <img src="assets/img/patterns/circulos-gradientes.png" alt="Circulos gradientes decorativos"
-                                class="pattern-circles">
+                                class="pattern-circles" loading="lazy">
                             <img src="assets/img/images/mujeres-mirando-folleto.png"
-                                alt="Consultoría de impacto en mipymes" class="main-image">
+                                alt="Consultoría de impacto en mipymes" class="main-image" loading="lazy">
                         </div>
 
                         <div class="impact-content">
                             <span class="badge">Consultoría de Impacto</span>
 
                             <h2>
-                                Más de 40 años fortaleciendo mipymes a través de alianzas de impacto
+                                Más de 40 años fortaleciendo mipymes a través de <br> <strong>alianzas de impacto</strong>
                             </h2>
 
                             <p>
@@ -117,7 +127,8 @@
                         <div class="goals-grid">
                             <article class="goal-card">
                                 <div class="goal-card-header">
-                                    <img src="assets/img/icons/cadena-valor.svg" alt="" class="goal-icon">
+                                    <img src="assets/img/icons/cadena de valor.svg" alt="Icono de cadena de valor"
+                                        class="goal-icon" loading="lazy">
                                     <h4>Integrar a mipymes en mi cadena de valor sostenible</h4>
                                     <button class="goal-toggle" aria-label="Expandir">
                                         <span class="toggle-icon">+</span>
@@ -135,7 +146,8 @@
                             </article>
                             <article class="goal-card">
                                 <div class="goal-card-header">
-                                    <img src="assets/img/icons/cadena-valor.svg" alt="" class="goal-icon">
+                                    <img src="assets/img/icons/inclusión social.svg" alt="Icono de inclusión social"
+                                        class="goal-icon" loading="lazy">
                                     <h4>Diseñar e implementar programas de inclusión social</h4>
                                     <button class="goal-toggle" aria-label="Expandir">
                                         <span class="toggle-icon">+</span>
@@ -143,18 +155,20 @@
                                 </div>
                                 <div class="goal-card-content">
                                     <ul>
-                                        <li>Desarrollar capacidades logísticas y empresariales en mi cadena de valor.
+                                        <li>Programas de emprendimiento y empleabilidad con propósito.
                                         </li>
-                                        <li>Modernizar y desarrollar canales mayoristas y comercios minoristas.</li>
-                                        <li>Capacitar a mis proveedores para cumplir estándares técnicos.</li>
-                                        <li>Conectar a mipymes con soluciones financieras.</li>
+                                        <li>Estrategias de inclusión para comunidades vulnerables.</li>
+                                        <li>Soluciones y políticas corporativas para el cierre de brechas de género y
+                                            diversidad.</li>
+                                        <li>Fortalecimiento de capacidades en poblaciones vulnerables. </li>
                                     </ul>
                                 </div>
                             </article>
 
                             <article class="goal-card">
                                 <div class="goal-card-header">
-                                    <img src="assets/img/icons/inclusion.svg" alt="" class="goal-icon">
+                                    <img src="assets/img/icons/sol.svg" alt="Icono de sostenibilidad ambiental"
+                                        class="goal-icon" loading="lazy">
                                     <h4>Implementar prácticas sostenibles con el medio ambiente</h4>
                                     <button class="goal-toggle" aria-label="Expandir">
                                         <span class="toggle-icon">+</span>
@@ -162,15 +176,68 @@
                                 </div>
                                 <div class="goal-card-content">
                                     <ul>
-                                        <li>Programas de emprendimiento y empleabilidad con propósito</li>
-                                        <li>Estrategias de inclusión para comunidades vulnerables.</li>
-                                        <li>Soluciones y políticas corporativas en materia de brechas de género y
-                                            diversidad.</li>
-                                        <li>Fortalecimiento de capacidades en poblaciones vulnerables.</li>
+                                        <li>Modelos de negocio sostenibles para mipymes.</li>
+                                        <li>Economía circular y bioeconomía.</li>
+                                        <li>Soluciones Basadas en la Naturaleza para negocios.</li>
+                                        <li>Resiliencia ambiental en territorios rurales.</li>
                                     </ul>
                                 </div>
                             </article>
-
+                            <article class="goal-card">
+                                <div class="goal-card-header">
+                                    <img src="assets/img/icons/transformacion digital.svg"
+                                        alt="Icono de transformación digital" class="goal-icon" loading="lazy">
+                                    <h4>Usar IA para transformar Mipymes</h4>
+                                    <button class="goal-toggle" aria-label="Expandir">
+                                        <span class="toggle-icon">+</span>
+                                    </button>
+                                </div>
+                                <div class="goal-card-content">
+                                    <ul>
+                                        <li>Soluciones de Inteligencia artificial (IA) para transformar cadenas de
+                                            valor.</li>
+                                        <li>Soluciones de transformación digital.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="goal-card">
+                                <div class="goal-card-header">
+                                    <img src="assets/img/icons/Fondos.svg" alt="Icono de gestión de fondos y alianzas"
+                                        class="goal-icon" loading="lazy">
+                                    <h4>Gestionar fondos y alianzas</h4>
+                                    <button class="goal-toggle" aria-label="Expandir">
+                                        <span class="toggle-icon">+</span>
+                                    </button>
+                                </div>
+                                <div class="goal-card-content">
+                                    <ul>
+                                        <li>Manejo de alianzas público-privadas para el desarrollo productivo.</li>
+                                        <li>Gestión y operación de fondos internacionales.</li>
+                                        <li>Implementación en campo de programas gubernamentales.</li>
+                                        <li>Gestión de capital semilla para innovación en emprendimientos.</li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="goal-card">
+                                <div class="goal-card-header">
+                                    <img src="assets/img/icons/Conocimiento.svg"
+                                        alt="Icono de investigación, evaluación y generación de conocimiento"
+                                        class="goal-icon" loading="lazy">
+                                    <h4>Investigar, evaluar impacto y generar conocimiento</h4>
+                                    <button class="goal-toggle" aria-label="Expandir">
+                                        <span class="toggle-icon">+</span>
+                                    </button>
+                                </div>
+                                <div class="goal-card-content">
+                                    <ul>
+                                        <li>Evaluaciones de impacto social, ambiental y económico.</li>
+                                        <li>Monitoreo de indicadores alineados a Objetivos de Desarrollo Sostenible
+                                            (ODS) y criterios ESG.</li>
+                                        <li>Investigación y conocimiento para toma de decisiones basadas en evidencia.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -179,105 +246,117 @@
         </section>
         <section class="methodology">
             <div class="wrapper">
-                <div class="methodology-media">
-                    <img src="img/metodologia-equipo.jpg" alt="Equipo de FUNDES trabajando en metodología de impacto">
-                </div>
+                <div class="wrapper-methodology">
+                    <div class="methodology-media">
+                        <img src="assets/img/patterns/Metodologia-patron.png" alt="Patron de letras decorativo"
+                            loading="lazy">
+                        <img src="assets/img/images/mujeres-perro-juntas.png"
+                            alt="Equipo de FUNDES trabajando en metodología de impacto" class="woman-methodology"
+                            loading="lazy">
 
-                <div class="methodology-content">
+                    </div>
 
-                    <span class="methodology-bg-title" aria-hidden="true">
-                        METODOLOGÍA
-                    </span>
+                    <div class="methodology-content">
 
-                    <h2>
-                        De la estrategia a la acción: <br>
-                        <strong>nuestra metodología de impacto </strong>
-                    </h2>
+                        <h2>
+                            De la estrategia a la acción: <br>
+                            <strong>nuestra metodología de impacto </strong>
+                        </h2>
 
-                    <p>
-                        Contamos con el talento de más de <strong>200 especialistas en terreno</strong>
-                        que construyen soluciones hechas a la medida para garantizar resultados
-                        sostenibles y adaptados a cada contexto.
-                    </p>
+                        <p>
+                            Contamos con el talento de más de <strong>200 especialistas en terreno</strong>
+                            que construyen soluciones hechas a la medida para garantizar resultados
+                            sostenibles y adaptados a cada contexto.
+                        </p>
 
-                    <a href="#" class="button-primary">
-                        Descubre nuestra metodología
-                    </a>
+                        <a href="#" class="button-primary">
+                            Descubre nuestra metodología
+                        </a>
 
+                    </div>
                 </div>
             </div>
         </section>
         <section class="impact">
             <div class="wrapper">
-                <div class="impact-intro">
-                    <h2>Nuestro impacto</h2>
-                    <p>
-                        Durante <strong>más de 40 años</strong> hemos creído que las mipymes son el
-                        motor del desarrollo sostenible de nuestra región. Junto a nuestros aliados,
-                        hemos acompañado a más de <strong>2 millones de mipymes</strong> y sus comunidades,
-                        demostrando que cuando las mipymes crecen, también crecen las oportunidades,
-                        el bienestar y la resiliencia de nuestros territorios.
-                    </p>
-                </div>
-
-                <div class="impact-metrics">
-                    <ul class="metrics-list">
-                        <li class="metric-item">
-                            <span class="metric-number">+01</span>
-                            <span class="metric-label">Años de experiencia</span>
-                        </li>
-                        <li class="metric-item">
-                            <span class="metric-number">0000001</span>
-                            <span class="metric-label">Mipymes impactadas</span>
-                        </li>
-                        <li class="metric-item">
-                            <span class="metric-number">01</span>
-                            <span class="metric-label">Países</span>
-                        </li>
-                        <li class="metric-item">
-                            <span class="metric-number">+001</span>
-                            <span class="metric-label">Proyectos</span>
-                        </li>
-                    </ul>
-                    <p class="impact-note">Desde el 2014</p>
-                </div>
-
-                <div class="impact-geo">
-
-                    <div class="geo-map">
-                        <img src="img/mapa-america.png" alt="Mapa de América con presencia de FUNDES">
+                <div class="wrapper-impact">
+                    <div class="impact-map">
+                        <h2>Nuestro impacto</h2>
+                        <p>
+                            Durante <strong>más de 40 años</strong> hemos creído que las <strong>mipymes son el motor
+                                del desarrollo sostenible</strong> de nuestra región. Junto a nuestros aliados, hemos
+                            acompañado a más de 2 millones de mipymes y sus comunidades, demostrando que <strong>cuando
+                                las mipymes crecen, también crecen las oportunidades, el bienestar y la resiliencia de
+                                nuestros territorios</strong>.
+                        </p>
                     </div>
 
-                    <div class="geo-content">
-
-                        <h3>América</h3>
-                        <p class="geo-subtitle">Añadir subtítulo</p>
-                        <p>
-                            En América tenemos 3 hubs principales: México, Centroamérica y Sudamérica.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor
-                            scelerisque interdum eu semper lobortis.
-                        </p>
-                        <ul class="geo-stats">
-                            <li>
-                                <strong>3</strong>
-                                <span>Oficinas</span>
+                    <div class="impact-metrics">
+                        <ul class="metrics-list">
+                            <li class="metric-item">
+                                <span class="metric-number" data-target="40">+40</span>
+                                <span class="metric-label">Años de experiencia</span>
                             </li>
-                            <li>
-                                <strong>23</strong>
-                                <span>Países</span>
+                            <li class="metric-item">
+                                <span class="metric-number" data-target="2000000">2000000</span>
+                                <span class="metric-label">Mipymes impactadas</span>
                             </li>
-                            <li>
-                                <strong>1029</strong>
-                                <span>Proyectos</span>
+                            <li class="metric-item">
+                                <span class="metric-number" data-target="24">24</span>
+                                <span class="metric-label">Países</span>
+                            </li>
+                            <li class="metric-item">
+                                <span class="metric-number" data-target="600">+600</span>
+                                <span class="metric-label">Proyectos</span>
                             </li>
                         </ul>
+                        <div class="impact-note">
+                            <p><strong>Desde el 2014</strong></p>
+                        </div>
                     </div>
+
+                    <div class="geo-map">
+                        <div class="map-slide active">
+                            <div style="width: 100%;">
+                                <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+                                    <iframe title="AMÉRICA" frameborder="0" width="1200px" height="675px"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        src="https://view.genially.com/695d3564930571d7cbabe2e5" type="text/html"
+                                        allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+                                        allownetworking="all">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-slide">
+                            <div style="width: 100%;">
+                                <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;">
+                                    <iframe title="ÁFRICA" frameborder="0" width="1200px" height="675px"
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        src="https://view.genially.com/695d43b0af1831ae6ead8339" type="text/html"
+                                        allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+                                        allownetworking="all">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="map-nav map-prev" aria-label="Mapa anterior">
+                            <img src="assets/img/icons/right.svg" alt="Botón de navegación hacia atrás">
+
+                        </button>
+                        <button class="map-nav map-next" aria-label="Siguiente mapa">
+                            <img src="assets/img/icons/left.svg" alt="Botón de navegación hacia adelante">
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </section>
-        <section class="annual-report-cta">
-            <div class="wrapper">
-                <div class="annual-report-content">
+        <section class="book">
+            <div class="wrapper bookanual">
+                <div class="book-content">
                     <h2>Memoria anual</h2>
                     <h3>Informe de resultados</h3>
                     <p>
@@ -288,33 +367,80 @@
                         Descargá la memoria anual
                     </a>
                 </div>
-                <div class="annual-report-media">
-                    <img src="img/memoria-anual-2025.png" alt="Memoria anual FUNDES 2025">
+                <div class="book-media">
+                    <img src="assets/img/images/libro-fundes.png" alt="Memoria anual FUNDES 2025" loading="lazy">
                 </div>
 
             </div>
 
         </section>
         <section class="brands">
-            <div class="wrapper">
-                <h2>+de 001 Organizaciones</h2>
-                <h3>han confiado en nuestro trabajo</h3>
-                <div class="brands-grid">
-                    <img src="assets/img/brands/pepsico.png" alt="Pepsico logo">
-                    <img src="assets/img/brands/coca-cola.png" alt="Coca-Cola logo">
-                    <img src="assets/img/brands/walmart.png" alt="Walmart logo">
-                    <img src="assets/img/brands/american-express.png" alt="American Express logo">
-                    <img src="assets/img/brands/visa.png" alt="Visa logo">
-                    <img src="assets/img/brands/corficolombiana.png" alt="">
+            <div class="wrapper brand-wrapper">
+                <div class="brands-title">
+                    <h2>+de <span>600</span> Organizaciones</h2>
+                    <h3>han confiado en nuestro trabajo</h3>
                 </div>
+                <div class="brands-slider">
+                    <div class="brands-track">
+                        <div class="brand-item">
+                            <img src="assets/img/brands/pepsico.png" alt="Pepsico logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/coca-cola.png" alt="Coca-Cola logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/walmart.png" alt="Walmart logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/american-express.png" alt="American Express logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/visa.png" alt="Visa logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/corficolombiana.png" alt="Corficolombiana logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/nestle.png" alt="Nestlé logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/pepsico.png" alt="Pepsico logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/coca-cola.png" alt="Coca-Cola logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/walmart.png" alt="Walmart logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/american-express.png" alt="American Express logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/visa.png" alt="Visa logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/corficolombiana.png" alt="Corficolombiana logo" loading="lazy">
+                        </div>
+                        <div class="brand-item">
+                            <img src="assets/img/brands/nestle.png" alt="Nestlé logo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="contact">
-            <div class="wrapper">
+            <div class="wrapper contact-wrapper">
                 <div class="contact-content">
-                    <h2>¡Construyamos soluciones de impacto sostenible!</h2>
-                    <p>Contactanos y descubre cómo FUNDES puede apoyarte en el diseño y ejecución de tus proyectos que
-                        impulsan el desarrollo de las mipymes.</p>
+                    <div class="contact-title">
+                        <h2>¡Construyamos soluciones de impacto sostenible!</h2>
+                        <p>Contáctanos y descubre cómo FUNDES puede apoyarte en el diseño y ejecución de proyectos que impulsan el desarrollo de las mipymes.</p>
+                    </div>
+                    <div class="contact-img">
+                        <img src="assets/img/patterns/Circulo.png" alt="circulo decorativo" loading="lazy" class="circulo-decorativo-contact">
+                        <img src="assets/img/images/Eclipse.png" alt="mujer trabajadora costurera" loading="lazy">
+                    </div>
                 </div>
+
                 <div class="contact-form">
                     <form action="#" class="form">
                         <div class="form-group">
@@ -337,6 +463,7 @@
                             <label for="country">País</label>
                             <select name="country" id="country" required>
                                 <option value="" disabled selected>Seleccioná un país</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="company">Tipo de organización</label>
@@ -362,6 +489,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
+                    <hr class="contact-divider">
                     <p class="contact-form-note">
                         Tambien puedes explorar nuestras solicitudes aquí
                     </p>
@@ -377,22 +505,22 @@
                 <ul class="social-links">
                     <li>
                         <a href="#" aria-label="LinkedIn">
-                            <img src="assets/img/social/Linkedin.svg" alt="">
+                            <img src="assets/img/social/Linkedin.svg" alt="Logo de LinkedIn">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="YouTube">
-                            <img src="assets/img/social/YouTube.svg" alt="">
+                            <img src="assets/img/social/YouTube.svg" alt="Logo de YouTube">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Facebook">
-                            <img src="assets/img/social/Facebook.svg" alt="">
+                            <img src="assets/img/social/Facebook.svg" alt="Logo de Facebook">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Instagram">
-                            <img src="assets/img/social/Instagram.svg" alt="">
+                            <img src="assets/img/social/Instagram.svg" alt="Logo de Instagram">
                         </a>
                     </li>
                 </ul>
@@ -427,8 +555,9 @@
         </div>
     </footer>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/form.js"></script>
     <script src="assets/js/nav.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/contador.js"></script>
 </body>
 
 </html>

@@ -229,28 +229,22 @@ const countries = [
 
 const select = document.getElementById('country');
 
-countries.forEach(country => {
-    const option = document.createElement('option');
-    option.value = country.code;
-    option.textContent = country.name;
-    select.appendChild(option);
-});
+if (select) {
+    countries.forEach(country => {
+        const option = document.createElement('option');
+        option.value = country.code;
+        option.textContent = country.name;
+        select.appendChild(option);
+    });
+}
 
-// Toggle cards expandibles
+
 const goalCards = document.querySelectorAll('.goal-card');
 
 goalCards.forEach(card => {
     const header = card.querySelector('.goal-card-header');
 
     header.addEventListener('click', () => {
-        // Cerrar otras cards (opcional)
-        goalCards.forEach(otherCard => {
-            if (otherCard !== card) {
-                otherCard.classList.remove('active');
-            }
-        });
-
-        // Toggle la card actual
         card.classList.toggle('active');
     });
 });

@@ -4,11 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F1F7FF">
     <title>Cadenas de valor sostenible</title>
+    <!-- Google Fonts precargado para evitar FOUC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/nav.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/value-chain.css">
+    <style>
+        /* Evita flash: fondo del body visible desde el primer frame */
+        html { background-color: #F1F7FF; }
+    </style>
 </head>
 
 <body>
@@ -72,11 +81,16 @@
     <main>
         <section class="hero-secondary">
             <div class="wrapper">
-                <h1>Cadenas de valor sostenible</h1>
+                <div class="wrapper-hero-chain">
+                    <img src="assets/img/icons/cadena de valor.svg"
+                        alt="Cadena de valor icon" class="icon-hero">
+                    <h1>Cadenas de valor</h1>
+                </div>
+
             </div>
         </section>
         <section class="description-secondary">
-            <div class="wrapper">
+            <div class="wrapper chain-description">
                 <h2>Impulsamos la productividad y competitividad de las mipymes</h2>
                 <p>Las cadenas de valor empresariales se vuelven más resilientes, eficientes y competitivas cuando
                     integran a
@@ -99,39 +113,42 @@
                     nuestros aliados.</p>
                 <div class="solution-grid-three">
                     <article class="solution-card">
-                        <img src="" alt="">
+                        <img src="assets/img/images/costurera.jpg" alt="mujer costurera">
                         <div class="card-titles">
-                            <h3>Desarrollo de mipymes como proveedores.</h3>
+                            <h3>Desarrollo de mipymes como proveedores</h3>
+                            <p class="card-desc">Fortalecemos a las mipymes  para que cumplan estándares técnicos, sociales y ambientales, y mejoren su productividad. A través del diagnóstico y la creación de planes de fortalecimiento, preparamos a las mipymes para operar con mayor calidad, consistencia y cumplimiento, creando relaciones comerciales más sólidas y sostenibles con las empresas.</p>
                         </div>
                     </article>
                     <article class="solution-card">
-                        <img src="" alt="">
+                        <img src="assets/img/images/delivery-man.jpg" alt="hombre repartidor cocacolero">
                         <div class="card-titles">
-                            <h3>Optimización logística y distribución sostenible.</h3>
+                            <h3>Optimización logística y distribución sostenible</h3>
+                            <p class="card-desc">Fortalecemos las capacidades logísticas y empresariales de las mipymes para reducir riesgos y mejorar la distribución. Optimizamos modelos de transporte, rutas y procesos logísticos, mejorando la trazabilidad y la seguridad, y reduciendo costos para construir cadenas de valor más sostenibles.</p>
                         </div>
                     </article>
                     <article class="solution-card">
-                        <img src="" alt="">
+                        <img src="assets/img/images/cajera.jpg" alt="cajera de local">
                         <div class="card-titles">
-                            <h3>Crecimiento comercial y profesionalización de canales de venta.</h3>
+                            <h3>Crecimiento comercial y profesionalización de canales de venta </h3>
+                            <p class="card-desc">Impulsamos el desarrollo de comercios minoristas, como tiendas de barrio y microfranquicias, para incrementar sus ventas y mejorar su desempeño comercial. Identificamos oportunidades de crecimiento, fortalecemos la gestión comercial y de inventarios e incorporamos modelos de canal y herramientas digitales que apoyan la profesionalización y el crecimiento sostenible de los puntos de venta.</p>
                         </div>
                     </article>
                 </div>
                 <div class="solution-grid-two">
                     <article class="solution-card">
-                        <img src="" alt="">
+                        <img src="assets/img/images/cajera-de-restoran.jpg" alt="Cajera de restaurante">
                         <div class="card-titles">
-                            <h3>Educación e inclusión
-                                financiera.</h3>
+                            <h3>Educación e inclusión <br> financiera</h3>
+                            <p class="card-desc">Facilitamos la bancarización y el acceso a financiamiento de las mipymes mediante educación financiera y acompañamiento especializado. Ayudamos a superar barreras de acceso a servicios formales, promoviendo el uso de herramientas financieras y medios de pago digitales que fortalecen la toma de decisiones y amplían las oportunidades de crecimiento.</p>
                         </div>
                     </article>
                     <article class="solution-card">
-                        <img src="" alt="">
+                        <img src="assets/img/images/charla.jpg" alt="mujer dando una chatla de castrol ">
                         <div class="card-titles">
-                            <h3>Gestión empresarial y mejora operativa.</h3>
+                            <h3>Gestión empresarial y mejora operativa</h3>
+                            <p class="card-desc">A través de asesorías, mentorías y coaching, acompañamos a las mipymes en la profesionalización de su organización interna y modelos de gobernanza. Impulsamos procesos de formalización, mejora continua y toma de decisiones estratégicas que fortalecen su capacidad para crecer de manera sostenible.</p>
                         </div>
                     </article>
-
                 </div>
             </div>
         </section>
@@ -147,7 +164,7 @@
                 <h2>Casos destacados</h2>
                 <div class="cases-grid-cards">
                     <article class="solucion-card">
-                        <img src="" alt="Acquaroni: Mi taller avanza">
+                        <img src="assets/img/images/grupo-de-hombres-en-taller-de-auto.jpg" alt="Acquaroni: Mi taller avanza">
                         <div class="card-content">
                             <h3>Acquaroni: Mi taller avanza</h3>
                             <p class="card-subtitle">Fortalecimiento empresarial en Guatemala</p>
@@ -159,7 +176,7 @@
                         </div>
                     </article>
                     <article class="solucion-card">
-                        <img src="" alt="Acquaroni: Mi taller avanza">
+                        <img src="assets/img/images/retrato-de-hombre-seguridad.jpg" alt="Desarrollo Proveedores TecPetrol">
                         <div class="card-content">
                             <h3>Desarrollo Proveedores TecPetrol</h3>
                             <p class="card-subtitle">Mejora de la gestión empresarial en Argentina</p>
@@ -171,7 +188,7 @@
                         </div>
                     </article>
                     <article class="solucion-card">
-                        <img src="" alt="Acquaroni: Mi taller avanza">
+                        <img src="assets/img/images/mujer-vestido-colores.JPG" alt="Relacionamiento Comunitario Cargill">
                         <div class="card-content">
                             <h3>Relacionamiento Comunitario Cargill</h3>
                             <p class="card-subtitle">Diagnóstico y fortalecimiento comunitario en Costa Rica y Nicaragua
@@ -239,22 +256,22 @@
                 <ul class="social-links">
                     <li>
                         <a href="#" aria-label="LinkedIn">
-                            <img src="assets/img/social/Linkedin.svg" alt="">
+                            <img src="assets/img/social/Linkedin.svg" alt="Logo de LinkedIn">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="YouTube">
-                            <img src="assets/img/social/YouTube.svg" alt="">
+                            <img src="assets/img/social/YouTube.svg" alt="Logo de YouTube">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Facebook">
-                            <img src="assets/img/social/Facebook.svg" alt="">
+                            <img src="assets/img/social/Facebook.svg" alt="Logo de Facebook">
                         </a>
                     </li>
                     <li>
                         <a href="#" aria-label="Instagram">
-                            <img src="assets/img/social/Instagram.svg" alt="">
+                            <img src="assets/img/social/Instagram.svg" alt="Logo de Instagram">
                         </a>
                     </li>
                 </ul>
@@ -288,8 +305,6 @@
             </a>
         </div>
     </footer>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/form.js"></script>
     <script src="assets/js/nav.js"></script>
 </body>
 

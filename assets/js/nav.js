@@ -1,10 +1,8 @@
-// Toggle menú mobile
 const hamburger = document.querySelector('.hamburger');
 const mainNav = document.querySelector('.main-nav');
 const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu');
 const allMenuLinks = document.querySelectorAll('.menu a'); // Todos los links del menú
 
-// Función para cerrar el menú mobile
 function closeMenu() {
     hamburger.classList.remove('active');
     mainNav.classList.remove('active');
@@ -13,13 +11,11 @@ function closeMenu() {
     });
 }
 
-// Toggle hamburguesa
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     mainNav.classList.toggle('active');
 });
 
-// Toggle submenús en mobile
 menuItemsWithSubmenu.forEach(item => {
     const link = item.querySelector('a');
     link.addEventListener('click', (e) => {
@@ -30,9 +26,7 @@ menuItemsWithSubmenu.forEach(item => {
     });
 });
 
-// Cerrar menú al hacer clic en CUALQUIER link (incluyendo submenús)
 allMenuLinks.forEach(link => {
-    // Solo cerrar si NO es un link padre de submenu
     if (!link.parentElement.classList.contains('has-submenu') ||
         link.parentElement.parentElement.classList.contains('submenu')) {
         link.addEventListener('click', () => {
@@ -43,14 +37,12 @@ allMenuLinks.forEach(link => {
     }
 });
 
-// Cerrar menú al hacer click fuera
 document.addEventListener('click', (e) => {
     if (!e.target.closest('.header-wrapper')) {
         closeMenu();
     }
 });
 
-// Cerrar menú al redimensionar la ventana a desktop
 window.addEventListener('resize', () => {
     if (window.innerWidth > 1024) {
         closeMenu();

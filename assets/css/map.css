@@ -1,0 +1,65 @@
+.geo-map {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.map-slide {
+    display: none;
+    width: 100%;
+}
+
+.map-slide.active {
+    display: block;
+}
+
+.map-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0;
+    transition: opacity 0.3s;
+}
+
+.map-nav:hover {
+    opacity: 0.7;
+}
+
+.map-prev {
+    left: 20px;
+}
+
+.map-next {
+    right: 20px;
+}
+
+.map-nav img {
+    width: 38px;
+    height: 66px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .map-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .map-nav img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .map-prev {
+        left: 10px;
+    }
+
+    .map-next {
+        right: 10px;
+    }
+}
