@@ -303,7 +303,129 @@ body {
     margin-bottom: 48px;
 }
 
-/* círculos — pendiente */
+/* ─── CHAIN CIRCLES ──────────────────────── */
+/*
+  --s (size) se calcula en JS según el ancho del contenedor.
+  Todo escala a partir de --s (base desktop: 280px).
+*/
+
+.chain {
+    --s: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: calc(var(--s) * 0.285) calc(var(--s) * 0.214);
+    gap: calc(var(--s) * 0.178);
+}
+
+.chain .item {
+    position: relative;
+    width: var(--s);
+    height: var(--s);
+    flex-shrink: 0;
+}
+
+.chain .ring {
+    position: absolute;
+    width: calc(var(--s) * 1.357);
+    height: calc(var(--s) * 1.357);
+    border-radius: 50%;
+    border-width: calc(var(--s) * 0.171);
+    border-style: solid;
+    top: calc(var(--s) * -0.178);
+    left: calc(var(--s) * -0.178);
+    z-index: 1;
+}
+
+.chain .ring.bottom { clip-path: inset(50% 0 0 0); }
+.chain .ring.top    { clip-path: inset(0 0 50% 0); }
+
+.chain .circle {
+    position: absolute;
+    width: var(--s);
+    height: var(--s);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border: 4px solid #F1F7FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: filter 0.35s ease;
+    overflow: hidden;
+}
+
+.chain .circle-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--s) * 0.1);
+    text-align: center;
+    pointer-events: none;
+}
+
+.chain .label {
+    color: white;
+    font-family: var(--fuente-principal);
+    font-size: calc(var(--s) * 0.085);
+    font-weight: 700;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+}
+
+.chain .desc {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--s) * 0.12);
+    color: white;
+    font-family: var(--fuente-principal);
+    font-size: calc(var(--s) * 0.043);
+    font-weight: 400;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+/* Desktop hover */
+@media (hover: hover) {
+    .chain .item:hover .circle { filter: brightness(0.5); }
+    .chain .item:hover .label  { opacity: 0; }
+    .chain .item:hover .desc   { opacity: 1; }
+}
+
+/* Click / active state */
+.chain .item.active .circle { filter: brightness(0.5); }
+.chain .item.active .label  { opacity: 0; }
+.chain .item.active .desc   { opacity: 1; }
+
+/* Colors */
+.chain .dark .circle { background: var(--primary-color); }
+.chain .light .circle { background: var(--btn-color); }
+.chain .dark .ring   { border-color: var(--primary-color); }
+.chain .light .ring  { border-color: var(--btn-color); }
+
+/* Mobile: stack vertically, rings alternate sides */
+@media (max-width: 600px) {
+    .chain {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 42px;
+    }
+    .chain .item:nth-child(odd)  .ring { clip-path: inset(0 0 0 50%); }
+    .chain .item:nth-child(even) .ring { clip-path: inset(0 50% 0 0); }
+}
 
 /* ─── FEATURED CASES ──────────────────────── */
 
@@ -861,6 +983,12 @@ body {
     .contact-btns .wrapper {
         width: 100%;
         padding: 0 40px;
+    }
+
+    /* chain: add extra horizontal room beyond ring-overflow padding */
+    .chain {
+        padding-left: calc(var(--s) * 0.214 + 20px);
+        padding-right: calc(var(--s) * 0.214 + 20px);
     }
 
 }
