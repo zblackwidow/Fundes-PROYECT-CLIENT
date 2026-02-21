@@ -37,7 +37,6 @@ h6 {
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 40px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -60,21 +59,17 @@ body {
 }
 
 .value-chain {
-    background: url('../img/images/Familia-en-tienda-de-barrio.jpg') no-repeat center center;
-    background-position: 0 -126px;
+    background: url('../img/images/Familia-en-tienda-de-barrio.jpg') no-repeat center 25%;
     background-size: cover;
 }
 
 .climate {
-    background: url('../img/images/Hombre-jardiner-green-blue.jpg') no-repeat center center;
-    background-position: center -80px;
+    background: url('../img/images/Hombre-jardiner-green-blue.jpg') no-repeat center 15%;
     background-size: cover;
-
 }
 
 .economy {
-    background: url('../img/images/Mujer-verdulera-economy.jpg') no-repeat center center;
-    background-position: center -250px;
+    background: url('../img/images/Mujer-verdulera-economy.jpg') no-repeat center 35%;
     background-size: cover;
 }
 
@@ -163,7 +158,7 @@ body {
 /* ─── SOLUTIONS ───────────────────────────── */
 
 .solutions>.wrapper {
-    max-width: 1344px;
+    max-width: 1280px;
     background: white;
     border-radius: 10px;
     padding: 32px;
@@ -192,7 +187,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin-bottom: 16px;
 }
 
 /* Grid 2 columnas */
@@ -339,13 +333,25 @@ body {
     gap: 36px;
 }
 
-/* ─── CASE CARD (solucion-card) ───────────── */
+.solutions{
+    margin-bottom: 80px;
+}
+.solution-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.solution-container>.solution-grid-two {
+    flex: 1;
+    min-width: 0;
+}
+
 .solucion-card {
     width: 380px;
     height: 628px;
     background: white;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
@@ -356,7 +362,7 @@ body {
 
 
 .solucion-card img {
-    max-width: 331px;
+    width: 100%;
     height: 312px;
     border-radius: 8px;
     object-fit: cover;
@@ -375,7 +381,7 @@ body {
     font-family: var(--fuente-secundaria);
     font-size: 20px;
     font-weight: 700;
-    color: var(--card-title-color);
+    color: #1E3A8A;
     line-height: 1.3;
     margin-bottom: 8px;
 }
@@ -384,7 +390,7 @@ body {
     font-family: var(--fuente-secundaria);
     font-size: 14px;
     font-weight: 600;
-    color: var(--title-form-color);
+    color: #282943;
     letter-spacing: 0.5px;
     margin-bottom: 16px;
 }
@@ -393,7 +399,7 @@ body {
     font-family: var(--fuente-secundaria);
     font-size: 16px;
     line-height: 1.2;
-    color: var(--title-form-color);
+    color: #282943;
     flex: 1;
 }
 
@@ -401,17 +407,20 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 24px;
+    gap: 2px;
+    height: 38px;
+    padding: 8px 18px;
     background: var(--btn-color);
     color: var(--footer-color);
     font-family: var(--fuente-principal);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 10px;
     align-self: flex-start;
     transition: background 0.3s;
     margin-top: 6px;
+    white-space: nowrap;
 }
 
 .btn-card:hover {
@@ -433,7 +442,7 @@ body {
     line-height: 1.25;
 }
 
-.conteiner-cards {
+.container-cards {
     display: flex;
     flex-direction: column;
     gap: 36px;
@@ -444,6 +453,14 @@ body {
     align-items: center;
     background-color: white;
     border-bottom: 1px solid #E8EEF4;
+    box-shadow:
+        0px 2.77px 2.21px 0px #00000005,
+        0px 6.65px 5.32px 0px #00000007,
+        0px 12.52px 10.02px 0px #00000009,
+        0px 22.34px 17.87px 0px #0000000B,
+        0px 41.78px 33.42px 0px #0000000D,
+        0px 100px 80px 0px #00000012;
+        border-radius: 8px;
 }
 
 
@@ -490,22 +507,27 @@ body {
 }
 
 /* ─── CONTACT CTA ─────────────────────────── */
-.contact-value-chains {
+.contact-btns {
     width: 100%;
-    padding: 80px 0;
+    height: 488px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--footer-color);
 }
 
-.contact-value-chains .wrapper {
+.contact-btns .wrapper {
     text-align: center;
+    width: 912px;
 }
 
-.contact-value-chains h2 {
+.contact-btns h2 {
     font-family: var(--fuente-principal);
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
-    margin-bottom: 36px;
+    margin-bottom: 56px;
     line-height: 1.25;
 }
 
@@ -513,7 +535,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 32px;
     flex-wrap: wrap;
 }
 
@@ -755,11 +777,11 @@ body {
         font-size: 30px;
     }
 
-    .contact-value-chains {
+    .contact-btns {
         padding: 60px 0;
     }
 
-    .contact-value-chains h2 {
+    .contact-btns h2 {
         font-size: 34px;
     }
 
@@ -890,11 +912,11 @@ body {
         height: 64px;
     }
 
-    .contact-value-chains {
+    .contact-btns {
         padding: 48px 0;
     }
 
-    .contact-value-chains h2 {
+    .contact-btns h2 {
         font-size: 28px;
     }
 
@@ -948,7 +970,7 @@ body {
         font-size: 22px;
     }
 
-    .contact-value-chains h2 {
+    .contact-btns h2 {
         font-size: 24px;
     }
 
