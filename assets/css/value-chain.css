@@ -1,3 +1,51 @@
+/* base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #1D477E;
+    --secondary-color: #349CE6;
+    --btn-unselected-color: rgba(255, 255, 255, 0.2);
+    --btn-color: #4B9ED9;
+    --btn-hover-color: #3a8bc7;
+    --title-form-color: #282943;
+    --footer-color: #11203F;
+    --fuente-principal: 'Poppins', sans-serif;
+    --fuente-secundaria: 'Open Sans', sans-serif;
+    --fuente-numerica: 'Manrope', sans-serif;
+    --text-dark-teal: var(--text-dark-teal);
+    --card-title-color: var(--card-title-color);
+    --placeholder-bg: var(--placeholder-bg);
+}
+
+body {
+    font-family: var(--fuente-secundaria);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-principal);
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
 body {
     background-color: rgba(241, 247, 255, 1);
 }
@@ -5,13 +53,29 @@ body {
 .hero-secondary {
     width: 100%;
     height: 400px;
-    background: url('../img/images/Familia-en-tienda-de-barrio.jpg') no-repeat center center;
-    background-position: 0 -126px;
-    background-size: cover;
     position: relative;
     display: flex;
     align-items: flex-end;
     padding-bottom: 80px;
+}
+
+.value-chain {
+    background: url('../img/images/Familia-en-tienda-de-barrio.jpg') no-repeat center center;
+    background-position: 0 -126px;
+    background-size: cover;
+}
+
+.climate {
+    background: url('../img/images/Hombre-jardiner-green-blue.jpg') no-repeat center center;
+    background-position: center -80px;
+    background-size: cover;
+
+}
+
+.economy {
+    background: url('../img/images/Mujer-verdulera-economy.jpg') no-repeat center center;
+    background-position: center -250px;
+    background-size: cover;
 }
 
 .hero-secondary::after {
@@ -61,7 +125,7 @@ body {
     font-family: var(--fuente-principal);
     font-size: 48px;
     font-weight: 600;
-    color: rgba(29, 71, 126, 1);
+    color: var(--primary-color);
     margin-bottom: 32px;
     line-height: 1.25;
 
@@ -81,7 +145,7 @@ body {
     justify-content: center;
     padding: 14px 32px;
     background: var(--btn-color);
-    color: rgba(17, 32, 63, 1);
+    color: var(--footer-color);
     font-family: var(--fuente-principal);
     font-size: 16px;
     font-weight: 600;
@@ -92,7 +156,7 @@ body {
 }
 
 .description-secondary a:hover {
-    background: #3a8bc7;
+    background: var(--btn-hover-color);
     transform: translateY(-2px);
 }
 
@@ -119,7 +183,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.7;
-    color: rgba(6, 50, 49, 1);
+    color: var(--text-dark-teal);
     margin-bottom: 80px;
 }
 
@@ -243,15 +307,21 @@ body {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.6;
-    color: rgba(6, 50, 49, 1);
+    color: var(--text-dark-teal);
     margin-bottom: 48px;
 }
 
 /* círculos — pendiente */
 
 /* ─── FEATURED CASES ──────────────────────── */
+
 .featured-cases {
     width: 100%;
+}
+
+.cases {
+    width: 1280px;
+    border: 1px solid green;
 }
 
 .featured-cases h2 {
@@ -259,7 +329,7 @@ body {
     font-size: 36px;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 40px;
+    margin-bottom: 68.4px;
     line-height: 1.25;
 }
 
@@ -267,14 +337,14 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 36px;
-    padding: 0 80px;
 }
 
 /* ─── CASE CARD (solucion-card) ───────────── */
 .solucion-card {
     width: 380px;
+    height: 628px;
     background: white;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     display: flex;
@@ -291,38 +361,39 @@ body {
     border-radius: 8px;
     object-fit: cover;
     display: block;
-    background: #d0dce8;
+    background: var(--placeholder-bg);
 }
 
 .solucion-card .card-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     flex: 1;
+    padding-top: 16px;
 }
 
 .solucion-card h3 {
-    font-family: var(--fuente-principal);
-    font-size: 18px;
+    font-family: var(--fuente-secundaria);
+    font-size: 20px;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--card-title-color);
     line-height: 1.3;
+    margin-bottom: 8px;
 }
 
 .solucion-card .card-subtitle {
     font-family: var(--fuente-secundaria);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    color: var(--secondary-color);
-    text-transform: uppercase;
+    color: var(--title-form-color);
     letter-spacing: 0.5px;
+    margin-bottom: 16px;
 }
 
 .solucion-card .card-description {
     font-family: var(--fuente-secundaria);
-    font-size: 14px;
-    line-height: 1.65;
-    color: #5A6C7D;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--title-form-color);
     flex: 1;
 }
 
@@ -332,7 +403,7 @@ body {
     justify-content: center;
     padding: 10px 24px;
     background: var(--btn-color);
-    color: white;
+    color: var(--footer-color);
     font-family: var(--fuente-principal);
     font-size: 14px;
     font-weight: 600;
@@ -344,44 +415,50 @@ body {
 }
 
 .btn-card:hover {
-    background: #3a8bc7;
+    background: var(--btn-hover-color);
 }
 
 /* ─── RELATED CONTENT ─────────────────────── */
 .related-content {
     width: 100%;
     padding: 80px 0;
-    background: white;
 }
 
 .related-content h2 {
     font-family: var(--fuente-principal);
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 32px;
     line-height: 1.25;
 }
 
+.conteiner-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
 .content-card {
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 20px 0;
+    background-color: white;
     border-bottom: 1px solid #E8EEF4;
 }
+
 
 .content-card:last-child {
     border-bottom: none;
 }
 
 .content-card img {
-    width: 120px;
-    height: 80px;
+    width: 244px;
+    height: 156px;
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
-    background: #d0dce8;
+    background: gray;
+    margin: 24px;
 }
 
 .content-info {
@@ -392,25 +469,24 @@ body {
 
 .content-fecha {
     font-family: var(--fuente-secundaria);
-    font-size: 12px;
-    color: #8A9BB0;
-    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--title-form-color);
     letter-spacing: 0.5px;
 }
 
 .content-info h3 {
-    font-family: var(--fuente-principal);
-    font-size: 16px;
+    font-family: var(--fuente-secundaria);
+    font-size: 20px;
     font-weight: 700;
-    color: var(--primary-color);
-    line-height: 1.3;
+    color: var(--card-title-color);
+    line-height: 1.2;
 }
 
 .content-info p {
     font-family: var(--fuente-secundaria);
-    font-size: 14px;
-    line-height: 1.6;
-    color: #5A6C7D;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--title-form-color);
 }
 
 /* ─── CONTACT CTA ─────────────────────────── */
@@ -462,8 +538,8 @@ body {
 }
 
 .btn-primary:hover {
-    background: #3a8bc7;
-    border-color: #3a8bc7;
+    background: var(--btn-hover-color);
+    border-color: var(--btn-hover-color);
     transform: translateY(-2px);
 }
 
@@ -675,9 +751,6 @@ body {
     }
 }
 
-/* ============================================
-   RESPONSIVE — MOBILE 480px
-   ============================================ */
 @media (max-width: 480px) {
 
     .hero-secondary {
