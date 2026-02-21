@@ -1,4 +1,3 @@
-/* base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -40,7 +39,6 @@ h6 {
     user-select: none;
 }
 
-/* hero */
 .hero {
     position: relative;
     height: 749px;
@@ -96,7 +94,6 @@ h6 {
     color: var(--secondary-color);
 }
 
-/* consulting */
 .consulting {
     width: 100%;
     background: #F1F7FF;
@@ -184,7 +181,6 @@ h6 {
     color: #5A6C7D;
 }
 
-/* impact goals */
 .impact-goals {
     max-width: 1296px;
     height: auto;
@@ -321,7 +317,6 @@ h6 {
     color: white;
 }
 
-/* methodology */
 .methodology {
     width: 100%;
     height: 542px;
@@ -424,7 +419,6 @@ h6 {
     box-shadow: 0 4px 12px rgba(75, 158, 217, 0.3);
 }
 
-/* impact */
 .impact {
     background: #F1F7FF;
 }
@@ -461,7 +455,6 @@ h6 {
     text-align: center;
 }
 
-/* book */
 .book {
     background: url('../img/patterns/patron-de-lineas-blanco.png'), linear-gradient(180deg, #027592 0%, #1D477E 75%);
     background-repeat: no-repeat, no-repeat;
@@ -545,7 +538,6 @@ h6 {
     height: auto;
 }
 
-/* brands */
 .brands {
     background-color: #F1F7FF;
     height: 740px;
@@ -640,7 +632,6 @@ h6 {
     }
 }
 
-/* contact */
 .contact {
     display: flex;
     justify-content: center;
@@ -710,7 +701,6 @@ h6 {
     height: auto;
 }
 
-/* content cards */
 .content-card-list {
     display: flex;
     flex-direction: column;
@@ -786,13 +776,11 @@ h6 {
     color: #5A6C7D;
 }
 
-/* responsive */
 @media (max-width: 1024px) {
     .wrapper {
         padding: 0 30px;
     }
 
-    /* hero */
     .hero {
         height: 600px;
     }
@@ -807,7 +795,6 @@ h6 {
         max-width: 100%;
     }
 
-    /* consulting */
     .consulting {
         padding: 60px 0;
     }
@@ -856,7 +843,6 @@ h6 {
         font-size: 17px;
     }
 
-    /* impact goals */
     .impact-goals {
         max-width: 100%;
         padding: 60px 40px 80px;
@@ -871,7 +857,6 @@ h6 {
         flex: 1 1 calc(50% - 24px);
     }
 
-    /* methodology */
     .methodology {
         height: auto;
         padding: 60px 0;
@@ -926,7 +911,6 @@ h6 {
         max-width: 350px;
     }
 
-    /* impact */
     .wrapper-impact {
         padding: 0 30px;
     }
@@ -939,7 +923,6 @@ h6 {
         font-size: 17px;
     }
 
-    /* book */
     .bookanual {
         flex-direction: column;
         gap: 40px;
@@ -967,7 +950,6 @@ h6 {
         transform: translateX(0);
     }
 
-    /* brands */
     .brands {
         height: auto;
         padding: 60px 0;
@@ -997,7 +979,6 @@ h6 {
         max-width: 150px;
     }
 
-    /* contact */
     .contact {
         padding: 60px 0;
     }
@@ -1029,7 +1010,6 @@ h6 {
         padding: 0 20px;
     }
 
-    /* hero */
     .hero {
         height: 500px;
     }
@@ -1047,7 +1027,6 @@ h6 {
         padding: 4px 12px;
     }
 
-    /* consulting */
     .consulting {
         padding: 50px 0;
     }
@@ -1073,7 +1052,6 @@ h6 {
         padding: 6px 16px;
     }
 
-    /* impact goals */
     .impact-goals {
         padding: 40px 20px 60px;
         margin: 30px 0;
@@ -1110,7 +1088,6 @@ h6 {
         font-size: 14px;
     }
 
-    /* methodology */
     .methodology {
         padding: 50px 0;
     }
@@ -1127,7 +1104,6 @@ h6 {
         font-size: 16px;
     }
 
-    /* impact */
     .wrapper-impact {
         padding: 0 20px;
     }
@@ -1140,7 +1116,6 @@ h6 {
         font-size: 16px;
     }
 
-    /* book */
     .bookanual {
         padding: 30px 20px;
         gap: 30px;
@@ -1178,7 +1153,6 @@ h6 {
         font-size: 16px;
     }
 
-    /* brands */
     .brands {
         padding: 50px 0;
     }
@@ -1207,7 +1181,6 @@ h6 {
         max-width: 130px;
     }
 
-    /* contact */
     .contact {
         padding: 50px 0;
     }
@@ -1235,7 +1208,6 @@ h6 {
         padding: 0 15px;
     }
 
-    /* hero */
     .hero {
         height: 400px;
     }
@@ -1255,7 +1227,6 @@ h6 {
         margin: 5px 0;
     }
 
-    /* consulting */
     .consulting {
         padding: 40px 0;
     }
@@ -1281,7 +1252,6 @@ h6 {
         padding: 5px 12px;
     }
 
-    /* impact goals */
     .impact-goals {
         padding: 30px 15px 50px;
         margin: 20px 0;
@@ -1342,7 +1312,6 @@ h6 {
         margin-bottom: 8px;
     }
 
-    /* methodology */
     .methodology {
         padding: 40px 0;
     }
@@ -1366,7 +1335,6 @@ h6 {
         font-size: 14px;
     }
 
-    /* impact */
     .wrapper-impact {
         padding: 0 15px;
     }
@@ -1383,7 +1351,6 @@ h6 {
         font-size: 13px;
     }
 
-    /* book */
     .bookanual {
         padding: 25px 15px;
         gap: 20px;
@@ -1415,7 +1382,6 @@ h6 {
         font-size: 14px;
     }
 
-    /* brands */
     .brands {
         padding: 40px 0;
     }
@@ -1447,7 +1413,6 @@ h6 {
         max-width: 100px;
     }
 
-    /* contact */
     .contact {
         padding: 40px 0;
     }
@@ -1460,24 +1425,20 @@ h6 {
 
 @media (max-width: 375px) {
 
-    /* hero */
     .hero h1 {
         font-size: 22px;
     }
 
-    /* consulting */
     .impact-content h2 {
         font-size: 20px;
     }
 
-    /* book */
     .book-media img {
         max-width: 100%;
         position: relative;
         left: 35px;
     }
 
-    /* contact */
     .contact {
         text-align: center;
     }

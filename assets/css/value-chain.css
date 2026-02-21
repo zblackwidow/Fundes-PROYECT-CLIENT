@@ -1,4 +1,3 @@
-/* base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -107,7 +106,6 @@ body {
     margin-right: 32px;
 }
 
-/* ─── DESCRIPTION SECONDARY ──────────────── */
 .chain-description {
     display: flex;
     flex-direction: column;
@@ -155,7 +153,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ─── SOLUTIONS ───────────────────────────── */
 
 .solutions>.wrapper {
     max-width: 1280px;
@@ -182,7 +179,6 @@ body {
     margin-bottom: 80px;
 }
 
-/* Grid 3 columnas */
 .solution-grid-three {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -190,21 +186,18 @@ body {
     margin: 16px 0;
 }
 
-/* Grid 2 columnas */
 .solution-grid-two {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
 }
 
-/* Grid 4 cards (2x2) — Economía Verde */
 .solution-grid-four {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
-/* ─── SOLUTION CARD ───────────────────────── */
 .solution-card {
     position: relative;
     border-radius: 12px;
@@ -261,7 +254,6 @@ body {
     line-height: 1.25;
 }
 
-/* descripcion oculta */
 .solution-card .card-titles .card-desc {
     font-family: var(--fuente-secundaria);
     font-size: 16px;
@@ -279,7 +271,6 @@ body {
     opacity: 1;
 }
 
-/* ─── BRIDGES ─────────────────────────────── */
 .bridges {
     width: 100%;
     padding: 80px 0;
@@ -303,11 +294,7 @@ body {
     margin-bottom: 48px;
 }
 
-/* ─── CHAIN CIRCLES ──────────────────────── */
-/*
-  --s (size) se calcula en JS según el ancho del contenedor.
-  Todo escala a partir de --s (base desktop: 280px).
-*/
+
 
 .chain {
     --s: 280px;
@@ -351,7 +338,6 @@ body {
     top: 0;
     left: 0;
     z-index: 2;
-    border: 4px solid #F1F7FF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,25 +384,21 @@ body {
     text-align: center;
 }
 
-/* Desktop hover */
 @media (hover: hover) {
     .chain .item:hover .circle { filter: brightness(0.5); }
     .chain .item:hover .label  { opacity: 0; }
     .chain .item:hover .desc   { opacity: 1; }
 }
 
-/* Click / active state */
-.chain .item.active .circle { filter: brightness(0.5); }
+/* .chain .item.active .circle { filter: brightness(0.5); } */
 .chain .item.active .label  { opacity: 0; }
 .chain .item.active .desc   { opacity: 1; }
 
-/* Colors */
 .chain .dark .circle { background: var(--primary-color); }
 .chain .light .circle { background: var(--btn-color); }
 .chain .dark .ring   { border-color: var(--primary-color); }
 .chain .light .ring  { border-color: var(--btn-color); }
 
-/* Mobile: stack vertically, rings alternate sides */
 @media (max-width: 600px) {
     .chain {
         flex-direction: column;
@@ -427,7 +409,6 @@ body {
     .chain .item:nth-child(even) .ring { clip-path: inset(0 50% 0 0); }
 }
 
-/* ─── FEATURED CASES ──────────────────────── */
 
 .featured-cases {
     width: 100%;
@@ -548,7 +529,6 @@ body {
     background: var(--btn-hover-color);
 }
 
-/* ─── RELATED CONTENT ─────────────────────── */
 .related-content {
     width: 100%;
     padding: 80px 0;
@@ -627,7 +607,6 @@ body {
     color: var(--title-form-color);
 }
 
-/* ─── CONTACT CTA ─────────────────────────── */
 .contact-btns {
     width: 100%;
     height: 488px;
@@ -712,7 +691,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ─── ALLIANCE CARD ───────────────────────── */
 .alliance-section {
     width: 100%;
     padding: 80px 0;
@@ -956,7 +934,6 @@ body {
         font-size: 16px;
     }
 
-    /* — chain-description: el section ya tiene 60px top/bottom,
        el inner wrapper solo necesita padding lateral — */
     .chain-description {
         padding: 0 40px;
@@ -970,12 +947,10 @@ body {
         margin-bottom: 48px;
     }
 
-    /* solucion-card: ancho fijo 380px → llena la celda del grid */
     .solucion-card {
         width: 100%;
     }
 
-    /* contact-btns: altura fija → auto para que el contenido respire */
     .contact-btns {
         height: auto;
     }
@@ -985,7 +960,6 @@ body {
         padding: 0 40px;
     }
 
-    /* chain: add extra horizontal room beyond ring-overflow padding */
     .chain {
         padding-left: calc(var(--s) * 0.214 + 20px);
         padding-right: calc(var(--s) * 0.214 + 20px);
@@ -993,9 +967,6 @@ body {
 
 }
 
-/* ============================================
-   RESPONSIVE — MOBILE 768px
-   ============================================ */
 @media (max-width: 768px) {
 
     .hero-secondary {
@@ -1120,7 +1091,6 @@ body {
         font-size: 26px;
     }
 
-    /* especificidad igualada a la regla base para que el tamaño se aplique */
     .alliance-image .alliance-logo {
         width: 160px;
     }
@@ -1131,7 +1101,6 @@ body {
         padding: 14px 24px;
     }
 
-    /* — padding lateral seguro para wrappers sin regla propia — */
     .wrapper {
         padding: 0 20px;
     }
@@ -1140,7 +1109,6 @@ body {
         padding-bottom: 40px;
     }
 
-    /* hero: el wrapper tenía padding:0 fijo, necesita margen lateral en mobile */
     .hero-secondary .wrapper {
         padding: 0 20px;
     }
@@ -1151,13 +1119,11 @@ body {
         margin-right: 16px;
     }
 
-    /* chain-description: solo resetear vertical, el lateral lo hereda de .wrapper */
     .chain-description {
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    /* cases: igualar al wrapper (0 20px) para no perder el padding lateral */
     .cases {
         padding: 0 20px;
     }
@@ -1170,7 +1136,6 @@ body {
         margin-bottom: 32px;
     }
 
-    /* solucion-card: altura fija 628px → auto en mobile */
     .solucion-card {
         width: 100%;
         height: auto;
@@ -1264,7 +1229,6 @@ body {
         height: 220px;
     }
 
-    /* especificidad igualada a la regla base para que el tamaño se aplique */
     .alliance-image .alliance-logo {
         width: 140px;
     }
@@ -1312,13 +1276,11 @@ body {
         margin-right: 10px;
     }
 
-    /* chain-description: solo resetear vertical, el lateral lo hereda de .wrapper */
     .chain-description {
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    /* cases: igualar al wrapper (0 16px) para no perder el padding lateral */
     .cases {
         padding: 0 16px;
     }

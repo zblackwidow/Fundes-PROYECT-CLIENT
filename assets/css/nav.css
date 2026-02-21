@@ -27,7 +27,6 @@
     width: auto;
 }
 
-/* NAVEGACIÓN */
 .main-nav {
     display: flex;
     justify-content: center;
@@ -123,12 +122,6 @@
     white-space: nowrap;
 }
 
-/* .submenu li a:hover {
-    background: rgba(52, 156, 230, 0.1);
-    color: var(--secondary-color);
-    padding-left: 28px;
-} */
-
 .hamburger {
     display: none;
     flex-direction: column;
@@ -152,7 +145,6 @@
     display: block;
 }
 
-/* TABLET - 1024px y menos */
 @media (max-width: 1024px) {
     .hamburger {
         display: flex;
@@ -242,7 +234,6 @@
         background: rgba(52, 156, 230, 0.1);
     }
 
-    /* Animación hamburguesa */
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(4px, 4px);
     }
@@ -256,7 +247,6 @@
     }
 }
 
-/* MOBILE - 768px y menos */
 @media (max-width: 768px) {
     .header-wrapper {
         padding: 0 15px;
