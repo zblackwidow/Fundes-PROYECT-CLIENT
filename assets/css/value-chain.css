@@ -325,10 +325,16 @@ body {
     top: calc(var(--s) * -0.178);
     left: calc(var(--s) * -0.178);
     z-index: 1;
+    transition: border-color 0.35s ease;
 }
 
-.chain .ring.bottom { clip-path: inset(50% 0 0 0); }
-.chain .ring.top    { clip-path: inset(0 0 50% 0); }
+.chain .ring.bottom {
+    clip-path: inset(50% 0 0 0);
+}
+
+.chain .ring.top {
+    clip-path: inset(0 0 50% 0);
+}
 
 .chain .circle {
     position: absolute;
@@ -342,7 +348,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: filter 0.35s ease;
+    transition: filter 0.35s ease, background 0.35s ease;
     overflow: hidden;
 }
 
@@ -369,7 +375,10 @@ body {
 
 .chain .desc {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -385,19 +394,54 @@ body {
 }
 
 @media (hover: hover) {
-    .chain .item:hover .circle { filter: brightness(0.5); }
-    .chain .item:hover .label  { opacity: 0; }
-    .chain .item:hover .desc   { opacity: 1; }
+    .chain .item:hover .label {
+        opacity: 0;
+    }
+
+    .chain .item:hover .desc {
+        opacity: 1;
+    }
+
+    .chain .item:hover .circle {
+        background: #11203F;
+    }
+
+    .chain .item:hover .ring {
+        border-color: #11203F;
+    }
 }
 
-/* .chain .item.active .circle { filter: brightness(0.5); } */
-.chain .item.active .label  { opacity: 0; }
-.chain .item.active .desc   { opacity: 1; }
+.chain .item.active .label {
+    opacity: 0;
+}
 
-.chain .dark .circle { background: var(--primary-color); }
-.chain .light .circle { background: var(--btn-color); }
-.chain .dark .ring   { border-color: var(--primary-color); }
-.chain .light .ring  { border-color: var(--btn-color); }
+.chain .item.active .desc {
+    opacity: 1;
+}
+
+.chain .item.active .circle {
+    background: #11203F;
+}
+
+.chain .item.active .ring {
+    border-color: #11203F;
+}
+
+.chain .dark .circle {
+    background: var(--primary-color);
+}
+
+.chain .light .circle {
+    background: var(--btn-color);
+}
+
+.chain .dark .ring {
+    border-color: var(--primary-color);
+}
+
+.chain .light .ring {
+    border-color: var(--btn-color);
+}
 
 @media (max-width: 600px) {
     .chain {
@@ -405,8 +449,14 @@ body {
         padding: 50px 20px;
         gap: 42px;
     }
-    .chain .item:nth-child(odd)  .ring { clip-path: inset(0 0 0 50%); }
-    .chain .item:nth-child(even) .ring { clip-path: inset(0 50% 0 0); }
+
+    .chain .item:nth-child(odd) .ring {
+        clip-path: inset(0 0 0 50%);
+    }
+
+    .chain .item:nth-child(even) .ring {
+        clip-path: inset(0 50% 0 0);
+    }
 }
 
 
@@ -435,9 +485,10 @@ body {
     gap: 36px;
 }
 
-.solutions{
+.solutions {
     margin-bottom: 80px;
 }
+
 .solution-container {
     display: flex;
     flex-direction: column;
@@ -561,7 +612,7 @@ body {
         0px 22.34px 17.87px 0px #0000000B,
         0px 41.78px 33.42px 0px #0000000D,
         0px 100px 80px 0px #00000012;
-        border-radius: 8px;
+    border-radius: 8px;
 }
 
 
@@ -934,7 +985,6 @@ body {
         font-size: 16px;
     }
 
-       el inner wrapper solo necesita padding lateral — */
     .chain-description {
         padding: 0 40px;
     }
@@ -943,7 +993,7 @@ body {
         padding-bottom: 48px;
     }
 
-    .solutions > .wrapper > p {
+    .solutions>.wrapper>p {
         margin-bottom: 48px;
     }
 
@@ -1128,11 +1178,11 @@ body {
         padding: 0 20px;
     }
 
-    .solutions > .wrapper {
+    .solutions>.wrapper {
         padding: 24px;
     }
 
-    .solutions > .wrapper > p {
+    .solutions>.wrapper>p {
         margin-bottom: 32px;
     }
 
@@ -1285,11 +1335,11 @@ body {
         padding: 0 16px;
     }
 
-    .solutions > .wrapper {
+    .solutions>.wrapper {
         padding: 16px;
     }
 
-    .solutions > .wrapper > p {
+    .solutions>.wrapper>p {
         margin-bottom: 24px;
     }
 

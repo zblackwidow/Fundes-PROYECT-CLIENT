@@ -275,7 +275,6 @@
     }
 }
 
-/* MOBILE PEQUEÑO - 480px y menos */
 @media (max-width: 480px) {
     .header {
         height: 70px;

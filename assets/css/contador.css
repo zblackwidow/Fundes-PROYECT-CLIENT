@@ -95,7 +95,6 @@
 }
 
 @media (max-width: 360px) {
-    /* "2000000" a 36px en 2 col ≈ 168px, no cabe en ~120px → columna única */
     .metric-item {
         flex: 0 0 100%;
     }
