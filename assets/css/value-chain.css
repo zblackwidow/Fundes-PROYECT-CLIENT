@@ -320,8 +320,8 @@ body {
 }
 
 .cases {
-    width: 1280px;
-    border: 1px solid green;
+    width: 100%;
+    max-width: 1280px;
 }
 
 .featured-cases h2 {
@@ -555,6 +555,130 @@ body {
     transform: translateY(-2px);
 }
 
+/* ─── ALLIANCE CARD ───────────────────────── */
+.alliance-section {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.alliance-card {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    height: 713px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url('../img/images/aerial-view-vibrant-green-trees-forest.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.alliance-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.alliance-image .alliance-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 367px;
+    height: auto;
+}
+
+.alliance-content {
+    width: 661px;
+    flex-shrink: 0;
+    background: rgba(17, 32, 63, 0.8);
+    padding: 32px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.alliance-content h2 {
+    font-family: var(--fuente-principal);
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2;
+}
+
+.alliance-content p {
+    font-family: var(--fuente-secundaria);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.alliance-content p strong {
+    color: white;
+    font-weight: 700;
+}
+
+.alliance-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-alliance-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 16px 32px;
+    background: var(--btn-color);
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid var(--btn-color);
+    transition: all 0.3s;
+    color: var(--footer-color);
+    white-space: nowrap;
+}
+
+.btn-alliance-primary:hover {
+    background: var(--btn-hover-color);
+    border-color: var(--btn-hover-color);
+    transform: translateY(-2px);
+}
+
+.btn-alliance-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 16px 32px;
+    background: white;
+    font-family: var(--fuente-principal);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid white;
+    transition: all 0.3s;
+    color: var(--footer-color);
+    white-space: nowrap;
+}
+
+.btn-alliance-secondary:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
 /* ============================================
    RESPONSIVE — TABLET 1024px
    ============================================ */
@@ -588,7 +712,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* La 3ra card ocupa todo el ancho */
     .solution-grid-three .solution-card:last-child {
         grid-column: 1 / -1;
         height: 260px;
@@ -639,6 +762,36 @@ body {
     .contact-value-chains h2 {
         font-size: 34px;
     }
+
+    .alliance-section {
+        padding: 60px 0;
+    }
+
+    .alliance-card {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .alliance-image {
+        height: 320px;
+        flex: none;
+        width: 100%;
+    }
+
+    .alliance-content {
+        width: 100%;
+        padding: 40px 48px;
+        gap: 24px;
+    }
+
+    .alliance-content h2 {
+        font-size: 32px;
+    }
+
+    .alliance-content p {
+        font-size: 16px;
+    }
+
 }
 
 /* ============================================
@@ -749,6 +902,29 @@ body {
         padding: 12px 28px;
         font-size: 15px;
     }
+
+    .alliance-image {
+        height: 240px;
+    }
+
+    .alliance-content {
+        padding: 32px 24px;
+        gap: 20px;
+    }
+
+    .alliance-content h2 {
+        font-size: 26px;
+    }
+
+    .alliance-logo {
+        width: 160px;
+    }
+
+    .btn-alliance-primary,
+    .btn-alliance-secondary {
+        font-size: 16px;
+        padding: 14px 24px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -792,5 +968,34 @@ body {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .alliance-image {
+        height: 200px;
+    }
+
+    .alliance-content {
+        padding: 24px 20px;
+        gap: 16px;
+    }
+
+    .alliance-content h2 {
+        font-size: 22px;
+    }
+
+    .alliance-content p {
+        font-size: 14px;
+    }
+
+    .alliance-buttons {
+        flex-direction: column;
+    }
+
+    .btn-alliance-primary,
+    .btn-alliance-secondary {
+        width: 100%;
+        justify-content: center;
+        font-size: 15px;
+        padding: 12px 20px;
     }
 }
