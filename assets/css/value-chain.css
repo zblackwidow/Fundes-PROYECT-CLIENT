@@ -514,7 +514,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--footer-color);
+    background:
+        url('../img/patterns/patron-de-lineas-blanco.png') no-repeat left -24% top 83%,
+        url('../img/patterns/patron-de-lineas-blanco.png') no-repeat right -7% bottom 104%,
+        var(--footer-color)
 }
 
 .contact-btns .wrapper {
